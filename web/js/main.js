@@ -13,11 +13,12 @@ function request(method,url,data,successCallBack,errorCallBack,async,beforeSendF
 }
 
 function showMessage(responseData){
-	console.log("showMessage", responseData);
-	alert(responseData.description);
+	// console.log("showMessage", responseData);
+//    可以利用这个检查出错情况
 }
 function serverError(XMLHttpRequest, textStatus, errorThrown){
-	alert("服务器错误， 请检查前后台控制台输出！");
+	/*window.location.href = "../index.jsp"*/
+    window.location.href = "../jsp/User/404.jsp"
 }
 
 function addClass(ele, cls) {
@@ -93,15 +94,21 @@ function checkEmail(email){
         flag = 2;
     }
 }
-/*addClass(document.querySelector(".login"), "active")
-        setTimeout(function(){
-            addClass(document.querySelector(".sk-rotating-plane"), "active")
-            document.querySelector(".login").style.display = "none"
-        },800)
-        setTimeout(function(){
-            removeClass(document.querySelector(".login"), "active")
-            removeClass(document.querySelector(".sk-rotating-plane"), "active")
-            document.querySelector(".login").style.display = "block"
-            alert("登录成功")
 
-        },5000)*/
+function beforeSend() {
+//    请求动画
+}
+
+//各种请求的回调方法
+function successLoginCallBack(responseData) {
+    if(responseData.result == 0) {
+        /*sessionStorage.setItem("account")*/
+        window.location.href = "../index.jsp"
+    }
+    else alert("账号或密码输入错误");
+}
+
+function successRegisterCallBack(responseData) {
+    if(responseData.result == 0) alert("注册成功");
+    else alert("账号已存在");
+}

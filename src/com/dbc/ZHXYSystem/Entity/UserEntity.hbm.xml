@@ -6,16 +6,16 @@
 
     <class name="com.dbc.ZHXYSystem.Entity.UserEntity" table="user" schema="zhxysystem">
         <id name="account">
-            <column name="account" sql-type="varchar(50)" length="50"/>
+            <column name="account" sql-type="varchar(50)" length="50" not-null="true"/>
         </id>
         <property name="name">
-            <column name="name" sql-type="varchar(50)" length="50" not-null="true"/>
+            <column name="name" sql-type="varchar(50)" length="50"/>
         </property>
         <property name="password">
-            <column name="password" sql-type="varchar(50)" length="50"/>
+            <column name="password" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
         <property name="email">
-            <column name="email" sql-type="varchar(100)" length="100" not-null="true"/>
+            <column name="email" sql-type="varchar(100)" length="100"/>
         </property>
     </class>
 </hibernate-mapping>

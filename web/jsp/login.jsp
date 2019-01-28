@@ -16,7 +16,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>css3炫酷登录页</title>
+    <title>智慧校园-登录</title>
+    <link rel="shortcut icon" href="<%=basePath%>/img/favicon.png" />
     <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
     <meta name="author" content="DBC" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -121,8 +122,12 @@
         checkAccount(account);
         checkPassword(password);
 
+        var sendData = {"account": account.value, "password": password.value};
+
         if(flag == 2){
             Tip = "Tip:" + Tip;
+        }else{
+            request("POST", "<%=basePath%>/login", sendData, successLoginCallBack, serverError, true, beforeSend);
         }
         document.querySelector(".login_tip").innerHTML = Tip;
     }
@@ -141,10 +146,12 @@
         confimPassword(password, cPassword);
         checkEmail(email);
 
+        var sendData = {"account": account.value, "password": password.value, "email": email.value};
+
         if(flag == 2){
             Tip = "Tip:" + Tip;
         }else{
-            request("POST")
+            request("POST", "<%=basePath%>/register", sendData, successRegisterCallBack, serverError, true, beforeSend);
         }
 
         document.querySelector(".register_tip").innerHTML = Tip;

@@ -6,7 +6,7 @@
     <!-- data connection -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/gaosystem?userSSL=false"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/zhxysystem?userSSL=false"></property>
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
     </bean>
@@ -43,8 +43,7 @@
         </property>
     </bean>
 
-
-    <bean class="com.dbc.ZHXYSystem.Test.TestService" id="testService">
-        <property name="name" value="spring"></property>
+    <bean class="com.dbc.ZHXYSystem.Dao.UserDao" id="userDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 </beans>
