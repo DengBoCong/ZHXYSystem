@@ -42,7 +42,7 @@
             <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
                 <i class="icon-list"></i>
             </a>
-            <a href="index.html" class="navbar-brand text-lt">
+            <a href="#" class="navbar-brand text-lt">
                 <i class="icon-user"></i>
                 <img src="<%=basePath%>/img/user/logo.png" alt="." class="hide">
                 <span class="hidden-nav-xs m-l-sm">个人中心</span>
@@ -169,20 +169,26 @@
                                         </a>
                                     </li>--%>
                                     <li>
-                                        <a href="genres.html">
+                                        <a href="#">
                                             <i class="icon-globe icon text-info"></i>
                                             <span class="font-bold">圈子</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="events.html">
+                                        <a href="<%=basePath%>/jsp/User/album.jsp">
                                             <i class="icon-drawer icon text-primary-lter"></i>
                                             <b class="badge bg-primary pull-right">6</b>
-                                            <span class="font-bold">图记</span>
+                                            <span class="font-bold">时光机</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
+                                        <a href="<%=basePath%>/jsp/User/arrange.jsp">
+                                            <i class=" icon-bag icon  text-success"></i>
+                                            <span class="font-bold">安排公示</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<%=basePath%>/jsp/User/history.jsp">
                                             <i class=" icon-cursor icon  text-primary"></i>
                                             <span class="font-bold">足迹</span>
                                         </a>
@@ -318,6 +324,12 @@
                                         增值服务
                                     </li>
                                     <li>
+                                        <a href="<%=basePath%>/jsp/User/authentication.jsp">
+                                            <i class="icon-credit-card icon"></i>
+                                            <span>实名认证</span>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="#">
                                             <i class="icon-credit-card icon"></i>
                                             <span>充值电子币</span>
@@ -391,11 +403,23 @@
                                                 <p>翻过这座山，他们就会看见你的故事。 Turn over the mountain and they will see your story.</p>
                                                 <div class="line"></div>
                                                 <small class="text-uc text-xs text-muted">联系方式</small>
-                                                <br class="m-t-sm">
-                                                    <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-envelope">：1111116666@qq.com</i></a></br>
-                                                    <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-phone">：66666666666</i></a></br>
-                                                    <a href="#" class="btn btn-rounded btn-gplus btn-icon"><i class="fa  fa-map-marker">：中国杭州西湖区</i></a>
-                                                </p>
+                                                <div class="list-group">
+                                                    <a href="#" class="list-group-item">
+                                                        <i class="fa fa-chevron-right icon-muted"></i>
+                                                        <span class="badge badge-empty">杭州西湖区</span>
+                                                        <i class="fa fa-envelope icon-muted fa-fw"></i> 地址
+                                                    </a>
+                                                    <a href="#" class="list-group-item">
+                                                        <i class="fa fa-chevron-right icon-muted"></i>
+                                                        <span class="badge badge-empty">116666611@qq.com</span>
+                                                        <i class="fa fa-eye icon-muted fa-fw"></i> 邮箱
+                                                    </a>
+                                                    <a href="#" class="list-group-item">
+                                                        <i class="fa fa-chevron-right icon-muted"></i>
+                                                        <span class="badge badge-empty">66661166616</span>
+                                                        <i class="fa fa-phone icon-muted fa-fw"></i> 电话
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </section>

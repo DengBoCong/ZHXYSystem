@@ -28,7 +28,7 @@
 
 
     <!-- Style Sheet-->
-    <link rel='stylesheet' id='bootstrap-css-css'  href='<%=basePath%>/css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+    <%--<link rel='stylesheet' id='bootstrap-css-css'  href='<%=basePath%>/css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />--%>
     <link rel='stylesheet' id='responsive-css-css'  href='<%=basePath%>/css/responsive5152.css?ver=1.0' type='text/css' media='all' />
     <link rel='stylesheet' id='main-css-css'  href='<%=basePath%>/css/main5152.css?ver=1.0' type='text/css' media='all' />
     <link rel="stylesheet" href="<%=basePath%>/js/user/jPlayer/jplayer.flat.css" type="text/css" />
@@ -125,7 +125,7 @@
                     <footer class="footer hidden-xs no-padder text-center-nav-xs">
                         <div class="bg hidden-xs ">
                             <div class="dropdown dropup wrapper-sm clearfix">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <a href="<%=basePath%>/jsp/User/other_profile.jsp" class="dropdown-toggle">
                                     <span class="thumb-sm avatar pull-left m-l-xs">
                                         <img src="<%=basePath%>/img/person.jpeg" class="dker" alt="...">
                                         <i class="on b-black"></i>
@@ -157,22 +157,22 @@
                                         </a>
                                     </li>--%>
                                     <li>
-                                        <a href="genres.html">
+                                        <a href="<%=basePath%>/jsp/User/other_profile.jsp">
                                             <i class="icon-globe icon text-info"></i>
                                             <span class="font-bold">圈子</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="events.html">
+                                        <a href="<%=basePath%>/jsp/User/other_album.jsp">
                                             <i class="icon-drawer icon text-primary-lter"></i>
                                             <b class="badge bg-primary pull-right">6</b>
-                                            <span class="font-bold">图记</span>
+                                            <span class="font-bold">时光机</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
-                                            <i class=" icon-cursor icon  text-primary"></i>
-                                            <span class="font-bold">足迹</span>
+                                        <a href="<%=basePath%>/jsp/User/other_arrange.jsp">
+                                            <i class=" icon-bag icon  text-success"></i>
+                                            <span class="font-bold">安排公示</span>
                                         </a>
                                     </li>
                                     <%--<li>
