@@ -3,6 +3,8 @@ jQuery(document).ready(function(e) {
 
 	$ = jQuery;
 
+
+
     /*-----------------------------------------------------------------------------------*/
     /*	Menu Dropdown Control
      /*-----------------------------------------------------------------------------------*/
@@ -14,6 +16,32 @@ jQuery(document).ready(function(e) {
 
     $('.sub-menu li').click(function(){
         window.location = $(this).children('a').attr('href');
+    });
+
+    /* ---------------------------------------------------- */
+    /*	Accordion
+    /* ---------------------------------------------------- */
+    $(function() {
+        $('.accordion dt').click(function(){
+            $(this).siblings('dt').removeClass('current');
+            $(this).addClass('current').next('dd').slideDown(500).siblings('dd').slideUp(500);
+        });
+    });
+
+
+
+    /* ---------------------------------------------------- */
+    /*	Toggle
+    /* ---------------------------------------------------- */
+    $(function() {
+        $('dl.toggle dt').click(function(){
+            if($(this).hasClass('current')){
+                $(this).removeClass('current').next('dd').slideUp(500);
+            }
+            else{
+                $(this).addClass('current').next('dd').slideDown(500);
+            }
+        });
     });
 
 	/*-----------------------------------------------------------------------------------*/

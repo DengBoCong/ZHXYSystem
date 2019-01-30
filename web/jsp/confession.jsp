@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Power
-  Date: 2019/1/27
-  Time: 11:36
+  Date: 2019/1/28
+  Time: 17:07
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -22,7 +22,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>智慧校园-互助圈</title>
+    <title>智慧校园-表白墙</title>
 
     <link rel="shortcut icon" href="<%=basePath%>/img/favicon.png" />
 
@@ -105,8 +105,8 @@
 <!-- Start of Search Wrapper -->
 <div class="search-area-wrapper">
     <div class="search-area container">
-        <h3 class="search-header">这里 互帮互助</h3>
-        <p class="search-tag-line">你可以在下面的下拉框选择你感兴趣的高校 尽情享受温暖的高校校园吧！</p>
+        <h3 class="search-header">这里 青春年少</h3>
+        <p class="search-tag-line">你可以在下面的下拉框选择你感兴趣的高校 尽情享受充满甜甜恋爱的高校校园吧！</p>
 
         <form id="search-form" class="search-form clearfix" method="get" action="#" autocomplete="off">
             <div id="super_citys">
@@ -158,19 +158,19 @@
                     <header class="clearfix">
 
                         <h3 class="post-title">
-                            <a href="single.html">我要求助</a>
+                            <a href="<%=basePath%>/jsp/confession_detail.jsp">林沫好帅啊！求联系方式</a>
                         </h3>
 
                         <div class="post-meta clearfix">
                             <span class="date">2019-1-1</span>
-                            <span class="category"><a href="#" title="View all posts in Server &amp; Database">悬赏求助 &amp; 寻物</a></span>
+                            <span class="category"><a href="#" title="View all posts in Server &amp; Database">迷妹 &amp; 大胆告白</a></span>
                             <span class="comments"><a href="#" title="Comment on Integrating WordPress with Your Website">3 评论</a></span>
                             <span class="like-count">66</span>
                         </div><!-- end of post meta -->
 
                     </header>
-
-                    <p>我们中的许多人都在无休止的任务流、浏览器任务、社交媒体、电子邮件、会议中工作，从一件事奔向另一件事，永不停歇，永不停息。&nbsp;那一天就结束了，我们精疲力竭了，我们常常没有什么东西可以炫耀。我们从下一个开始 . . . <a class="readmore-link" href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">查看更多</a></p>
+                    <img src="<%=basePath%>/img/person.jpeg">
+                    <p>我们中的许多人都在无休止的任务流、浏览器任务、社交媒体、电子邮件、会议中工作，从一件事奔向另一件事，永不停歇，永不停息。&nbsp;那一天就结束了，我们精疲力竭了，我们常常没有什么东西可以炫耀。我们从下一个开始 . . . <a class="readmore-link" href="<%=basePath%>/jsp/confession_detail.jsp">查看更多</a></p>
 
                 </article>
 
@@ -331,32 +331,32 @@
                 <section class="widget">
                     <div class="support-widget">
                         <h3 class="title">热心贴士</h3>
-                        <p class="intro">没有悬赏的赏金? 给自己的帖子挂上赏金，可以吸引更多的人为你解决问题哦。</p>
+                        <p class="intro">没有他（她）表白? 喜欢是天生的，而爱情是自己争取的，赶紧偷偷地向他（她）表白吧！</p>
                     </div>
                 </section>
 
 
                 <section class="widget">
-                    <h3 class="title">巨额赏金贴</h3>
+                    <h3 class="title">评论最多</h3>
                     <ul class="articles">
                         <li class="article-entry standard">
-                            <h4><a href="single.html">我的橘猫丢了！</a></h4>
-                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">悬赏求助 &amp; 寻物</a></span>
+                            <h4><a href="single.html">林沫好帅啊！</a></h4>
+                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">迷妹 &amp; 大胆告白</a></span>
                             <span class="like-count">66</span>
                         </li>
                         <li class="article-entry standard">
-                            <h4><a href="single.html">我的女朋友丢了！</a></h4>
-                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">悬赏求助 &amp; 寻物</a></span>
+                            <h4><a href="single.html">六六好美啊！</a></h4>
+                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">迷弟 &amp; 偷偷暗恋</a></span>
                             <span class="like-count">66</span>
                         </li>
-                        <li class="article-entry video">
-                            <h4><a href="single.html">刚分手，找个树洞聊天</a></h4>
-                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">悬赏求助 &amp; 寻物</a></span>
+                        <li class="article-entry standard">
+                            <h4><a href="single.html">林沫好帅啊！</a></h4>
+                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">迷妹 &amp; 大胆告白</a></span>
                             <span class="like-count">66</span>
                         </li>
-                        <li class="article-entry image">
-                            <h4><a href="single.html">女朋友生日送什么好</a></h4>
-                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">悬赏求助 &amp; 寻物</a></span>
+                        <li class="article-entry standard">
+                            <h4><a href="single.html">六六好美啊！</a></h4>
+                            <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Server &amp; Database">迷弟 &amp; 偷偷暗恋</a></span>
                             <span class="like-count">66</span>
                         </li>
                     </ul>
@@ -487,4 +487,5 @@
 <script type="text/javascript" src="<%=basePath%>/js/select/index.js"></script>
 </body>
 </html>
+
 

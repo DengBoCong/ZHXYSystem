@@ -62,16 +62,16 @@
         <div class="menu-top-menu-container">
           <ul id="menu-top-menu" class="clearfix">
             <li class="current-menu-item"><a href="<%=basePath%>/index.jsp">首页</a></li>
-            <li><a href="home-categories-description.html">二手商圈</a></li>
+            <li><a href="<%=basePath%>/jsp/shop/shop.jsp">二手商圈</a></li>
             <li><a href="<%=basePath%>/jsp/helpKind.jsp">互助圈</a></li>
-            <li><a href="articles-list.html">竞赛圈</a></li>
+            <li><a href="<%=basePath%>/jsp/compete.jsp">竞赛圈</a></li>
             <li><a href="faq.html">就业圈</a></li>
             <li><a href="#">排行榜</a>
               <ul class="sub-menu">
-                <li><a href="blue-skin.html">人气排行榜</a></li>
-                <li><a href="green-skin.html">学术排行榜</a></li>
-                <li><a href="red-skin.html">赛事排行榜</a></li>
-                <li><a href="index-2.html">积分排行榜</a></li>
+                <li><a href="<%=basePath%>/jsp/ranking_list/popularity_ranking_list.jsp">人气排行榜</a></li>
+                <li><a href="<%=basePath%>/jsp/ranking_list/learning_ranking_list.jsp">学术排行榜</a></li>
+                <li><a href="<%=basePath%>/jsp/ranking_list/match_ranking_list.jsp">赛事排行榜</a></li>
+                <li><a href="<%=basePath%>/jsp/ranking_list/integral_ranking_list.jsp">积分排行榜</a></li>
               </ul>
             </li>
             <li><a href="#">更多圈子</a>
@@ -81,7 +81,7 @@
                 <li><a href="page.html">学术圈</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">表白墙</a></li>
+            <li><a href="<%=basePath%>/jsp/confession.jsp">表白墙</a></li>
             <li><a href="#"><img src="<%=basePath%>/img/person.jpeg" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
                 <ul class="sub-menu">
                     <li><a href="full-width.html">ID: DBC</a></li>
@@ -130,7 +130,7 @@
             <h3>热门圈子</h3>
             <ul class="articles">
               <li class="article-entry standard">
-                <h4><a href="single.html">喜欢写小说的伙伴聚过来！！！</a></h4>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">喜欢写小说的伙伴聚过来！！！</a></h4>
                 <span class="article-meta">2018-1-12 出自 <a href="#" title="View all posts in Server &amp; Database">小说 &amp; 文字控</a></span>
                 <span class="like-count">66</span>
               </li>
