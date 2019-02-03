@@ -634,7 +634,7 @@
             <div class="row">
                 <div class="span6">
                     <p class="copyright">
-                        Copyright &copy; 2019.MoMeng.All rights reserved.<a target="_blank" href="#">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                        Copyright &copy; 2019.MoMeng.All rights reserved.
                     </p>
                 </div>
                 <%--<div class="span6">

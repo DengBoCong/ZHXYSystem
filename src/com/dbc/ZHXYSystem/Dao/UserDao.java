@@ -2,6 +2,7 @@ package com.dbc.ZHXYSystem.Dao;
 
 import com.dbc.ZHXYSystem.Entity.UserEntity;
 import com.dbc.ZHXYSystem.Impl.UserImpl;
+import com.dbc.ZHXYSystem.Utils.JSONObject;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -47,11 +48,8 @@ public class UserDao implements UserImpl {
         session.close();
         if(userList.size() == 0) return "DIN";
         for(Iterator iterator = userList.iterator(); iterator.hasNext();){
-            String temp = "";
             UserEntity userEntity = (UserEntity)iterator.next();
-            temp = temp + "{\"account\":\"" + userEntity.getAccount() + "\"";
-            temp = temp + ",\"name\":\"" + userEntity.getName() + "\"";
-            temp = temp + ",\"password\":\"" + userEntity.getPassword() + "\"}";
+            String temp = JSONObject.fromUserEntity(userEntity);
             if(count == 0) temp = temp + "]";
             else temp = temp + ",";
             count++;
@@ -68,10 +66,7 @@ public class UserDao implements UserImpl {
         userEntity = (UserEntity)session.get(UserEntity.class, account);
         session.close();
         if(userEntity == null) return "DIN";
-        String temp = "";
-        temp = temp + "{\"account\":\"" + userEntity.getAccount() + "\"";
-        temp = temp + ",\"name\":\"" + userEntity.getName() + "\"";
-        temp = temp + ",\"password\":\"" + userEntity.getPassword() + "\"}";
+        String temp = JSONObject.fromUserEntity(userEntity);
         return temp;
     }
 

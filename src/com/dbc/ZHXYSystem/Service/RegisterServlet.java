@@ -32,14 +32,26 @@ public class RegisterServlet extends HttpServlet {
 
         UserEntity userEntity = new UserEntity();
         userEntity.setAccount(account);
-        userEntity.setName("");
+        userEntity.setPhone(account);
         userEntity.setPassword(password);
         userEntity.setEmail(email);
+        userEntity.setName("请完善姓名");
+        userEntity.setAddress("请完善地址");
+        userEntity.setProfile("请完善简介");
+        userEntity.setSignature("请完善签名");
+        userEntity.setImage("http://localhost:8080/img/head.png");
+        userEntity.setRank("1_1");
+        userEntity.setCompetitivePoint(0);
+        userEntity.setMutualAidIntegral(0);
+        userEntity.setNumberOfFan(0);
+        userEntity.setNumberOfFollow(0);
+        userEntity.setElectronicCurrency(0);
 
         boolean result = user.addUser(userEntity);
 
         if(result){
-            printWriter.append("{\"result\":\"0\"}");
+            String list = user.listUser(account);
+            printWriter.append("{\"result\":\"0\", \"message\":"+list+"}");
         }else{
             printWriter.append("{\"result\":\"1\"}");
         }

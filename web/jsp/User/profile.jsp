@@ -29,6 +29,11 @@
     <link rel="stylesheet" href="<%=basePath%>/css/user/font.css" type="text/css" />
     <link rel="stylesheet" href="<%=basePath%>/css/user/app.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style type="text/css">
+        .s_display_none{
+            display: none;
+        }
+    </style>
     <!--[if lt IE 9]>
     <script src="<%=basePath%>/js/user/ie/html5shiv.js"></script>
     <script src="<%=basePath%>/js/user/ie/respond.min.js"></script>
@@ -223,19 +228,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="layout-color.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/release_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>发布的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="layout-boxed.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/buy_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购买的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="layout-fluid.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/shopping_cart.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购物车</span>
                                                 </a>
@@ -312,7 +317,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="auto">
+                                        <a href="<%=basePath%>/jsp/User/confession.jsp" class="auto">
                                             <i class="icon-bubbles icon"></i>
                                             <span>表白</span>
                                         </a>
@@ -330,7 +335,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/User/recharge.jsp">
                                             <i class="icon-credit-card icon"></i>
                                             <span>充值电子币</span>
                                         </a>
@@ -363,8 +368,24 @@
                                                     <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                 </a>
                                                 <div>
-                                                    <div class="h3 m-t-xs m-b-xs">林沫</div>
-                                                    <small class="text-muted"><i class="fa fa-map-marker"></i> 中国, 杭州</small>
+                                                    <div id="personal_name_content" class="h3 m-t-xs m-b-xs">林沫</div>
+                                                    <small class="text-muted"><i class="fa fa-map-marker"></i> <span id="personal_location_content" >中国, 杭州</span></small>
+                                                    <span class="btn-group">
+                                                        <button id="personal_name" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-edit"></i></button>
+                                                    </span>
+                                                    <div id="personal_name_input" class="input-group s_display_none">
+
+                                                        <input id="personal_name_content_input" type="text" class="form-control input-sm no-border " placeholder="输入不大于十个字" maxlength="10" value="">
+                                                        <input id="personal_location_content_input" type="text" class="form-control input-sm no-border rounded" placeholder="地名用'，'隔开，eg. 中国，杭州" maxlength="20" value="">
+                                                        <span class="btn-group">
+                                                            <button id="cancel_personal_name_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-times"></i></button>
+                                                        </span>
+                                                        <span class="btn-group">
+                                                            <button id="submit_personal_name_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-check"></i></button>
+                                                        </span>
+                                                    </div>
+
+
                                                 </div>
                                             </div>
                                             <div class="panel wrapper">
@@ -398,17 +419,38 @@
                                             </div>--%>
                                             <div>
                                                 <small class="text-uc text-xs text-muted">个人简介</small>
-                                                <p>软件工程师、软件架构师、算法工程师</p>
+                                                <span class="btn-group">
+                                                    <button id="personal_profile" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-edit"></i></button>
+                                                </span>
+
+                                                <p id="personal_profile_content">软件工程师、软件架构师、算法工程师</p>
+                                                <div id="personal_profile_input" class="input-group s_display_none">
+                                                    <span class="input-group-btn">
+                                                        <button id="cancel_personal_profile_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-times"></i></button>
+                                                    </span>
+                                                    <input id="personal_profile_content_input" type="text" class="form-control input-sm no-border rounded" placeholder="输入不大于20个字" maxlength="20" value="">
+                                                    <span class="input-group-btn">
+                                                        <button id="submit_personal_profile_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-check"></i></button>
+                                                    </span>
+                                                </div>
+
                                                 <small class="text-uc text-xs text-muted">签名</small>
-                                                <p>翻过这座山，他们就会看见你的故事。 Turn over the mountain and they will see your story.</p>
+                                                <span class="btn-group">
+                                                    <button id="personal_autograph" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-edit"></i></button>
+                                                </span>
+                                                <p id="personal_autograph_content">翻过这座山，他们就会看见你的故事。 Turn over the mountain and they will see your story.</p>
+                                                <div id="personal_autograph_input" class="input-group s_display_none">
+                                                    <span class="input-group-btn">
+                                                        <button id="cancel_personal_autograph_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-times"></i></button>
+                                                    </span>
+                                                    <input id="personal_autograph_content_input" type="text" class="form-control input-sm no-border rounded" placeholder="输入不大于100个字" maxlength="100" value="">
+                                                    <span class="input-group-btn">
+                                                        <button id="submit_personal_autograph_input" type="button" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-check"></i></button>
+                                                    </span>
+                                                </div>
                                                 <div class="line"></div>
                                                 <small class="text-uc text-xs text-muted">联系方式</small>
                                                 <div class="list-group">
-                                                    <a href="#" class="list-group-item">
-                                                        <i class="fa fa-chevron-right icon-muted"></i>
-                                                        <span class="badge badge-empty">杭州西湖区</span>
-                                                        <i class="fa fa-envelope icon-muted fa-fw"></i> 地址
-                                                    </a>
                                                     <a href="#" class="list-group-item">
                                                         <i class="fa fa-chevron-right icon-muted"></i>
                                                         <span class="badge badge-empty">116666611@qq.com</span>
@@ -608,5 +650,87 @@
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/add-on/jplayer.playlist.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/demo.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/main.js"></script>
+<script type="text/javascript">
+    $("#personal_profile").click(function () {
+        $("#personal_profile_input").removeClass("s_display_none");
+    });
+
+
+    $("#cancel_personal_profile_input").click(function () {
+        /*alert($("#personal_profile_content_input").val());*/
+        $("#personal_profile_content_input").val("");
+        $("#personal_profile_input").addClass("s_display_none");
+
+    });
+
+    $("#submit_personal_profile_input").click(function () {
+        var input = $("#personal_profile_content_input").val();
+
+        if(input == ""){
+            alert("输入不能为空");
+            return;
+        }
+        $("#personal_profile_content").html(input);
+        /*$("#personal_profile_content_input").defaultValue = input;*/
+        $("#personal_profile_content_input").val("");
+        $("#personal_profile_input").addClass("s_display_none");
+    });
+
+    $("#personal_autograph").click(function () {
+        $("#personal_autograph_input").removeClass("s_display_none");
+    });
+
+
+    $("#cancel_personal_autograph_input").click(function () {
+        /*alert($("#personal_profile_content_input").val());*/
+        $("#personal_autograph_content_input").val("");
+        $("#personal_autograph_input").addClass("s_display_none");
+
+    });
+
+    $("#submit_personal_autograph_input").click(function () {
+        var input = $("#personal_autograph_content_input").val();
+
+        if(input == ""){
+            alert("输入不能为空");
+            return;
+        }
+        $("#personal_autograph_content").html(input);
+        /*$("#personal_autograph_content_input").defaultValue = input;*/
+        $("#personal_autograph_content_input").val("");
+        $("#personal_autograph_input").addClass("s_display_none");
+    });
+
+
+    $("#personal_name").click(function () {
+        $("#personal_name_input").removeClass("s_display_none");
+    });
+
+
+    $("#cancel_personal_name_input").click(function () {
+        /*alert($("#personal_profile_content_input").val());*/
+        $("#personal_name_content_input").val("");
+        $("#personal_location_content_input").val("");
+        $("#personal_name_input").addClass("s_display_none");
+
+    });
+
+    $("#submit_personal_name_input").click(function () {
+        var input_name = $("#personal_name_content_input").val();
+        var input_location = $("#personal_location_content_input").val();
+
+        if(input_name == "" || input_location == ""){
+            alert("输入不能为空");
+            return;
+        }
+        $("#personal_name_content").html(input_name);
+        $("#personal_location_content").html(input_location);
+        /*$("#personal_autograph_content_input").defaultValue = input;*/
+        $("#personal_name_content_input").val("");
+        $("#personal_location_content_input").val("");
+        $("#personal_name_input").addClass("s_display_none");
+    });
+</script>
 </body>
 </html>

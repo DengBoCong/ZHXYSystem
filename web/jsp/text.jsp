@@ -7,636 +7,272 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en" class="app">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>Musik | Web Application</title>
-    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
-    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
-    <link rel="stylesheet" href="css/font.css" type="text/css" />
-    <link rel="stylesheet" href="css/app.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <!--[if lt IE 9]>
-    <script src="js/ie/html5shiv.js"></script>
-    <script src="js/ie/respond.min.js"></script>
-    <script src="js/ie/excanvas.js"></script>
-    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>lb</title>
+    <style>
+        *{ margin:0; padding:0;}
+        img{ border:0;}
+        ul,li{ list-style-type:none;}
+        .turn{ width:302px; height:134px; border:1px #000100 solid; margin:30px; position:relative; overflow:hidden;}
+        .turn-loading{ width:302px; height:134px; position:absolute; z-index:4; overflow:hidden; background:#202f42;}
+        .turn-loading img{ width:32px; height:32px; margin:51px 0 0 135px;}
+        .turn-pic li{ position:absolute; top:0px; left:0px; filter:alpha(opacity=0); opacity:0;}
+        .turn-pic li img{ width:302px; height:134px; overflow:hidden;}
+        .turn-bg{ width:302px; height:32px; overflow:hidden; background:#000; position:absolute; z-index:2; bottom:0; filter:alpha(opacity=70); opacity:0.7;}
+        .turn-tit{ font-size:12px;}
+        .turn-tit a{ color:#afafaf; text-decoration:none;}
+        .turn-tit a:hover{ color:#ffb02b; text-decoration:none;}
+        .turn-tit li{ position:absolute; z-index:3; bottom:-20px; left:5px;}
+        .turn-btn{ position:absolute; z-index:3; font-size:12px; color:#afafaf; bottom:8px; right:15px;}
+        .turn-btn .lb,.turn-btn .rb{ width:6px; height:9px; background:url(img/btn.png) no-repeat; overflow:hidden; position:absolute; top:3px; left:-10px; cursor:pointer;}
+        .turn-btn .rb{ background-position:-6px 0; left:21px;}
+        .turn-btn span{ text-align:center;}
+    </style>
 </head>
-<body class="">
-<section class="vbox">
-    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
-        <div class="navbar-header aside bg-info dk">
-            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
-                <i class="icon-list"></i>
-            </a>
-            <a href="index.html" class="navbar-brand text-lt">
-                <i class="icon-earphones"></i>
-                <img src="images/logo.png" alt="." class="hide">
-                <span class="hidden-nav-xs m-l-sm">Musik</span>
-            </a>
-            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
-                <i class="icon-settings"></i>
-            </a>
-        </div> <ul class="nav navbar-nav hidden-xs">
-        <li>
-            <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
-                <i class="fa fa-indent text"></i>
-                <i class="fa fa-dedent text-active"></i>
-            </a>
-        </li>
+<body>
+<div id="turn" class="turn">
+    <div class="turn-loading"><img src="img/loading_comment.gif" /></div>
+    <ul class="turn-pic">
+        <li><a href="#"><img src="img/1.jpg" title="演示信息1" /></a></li>
+        <li><a href="#"><img src="img/2.jpg" title="演示信息2" /></a></li>
+        <li><a href="#"><img src="img/3.jpg" title="演示信息3" /></a></li>
+        <li><a href="#"><img src="img/4.jpg" title="演示信息4" /></a></li>
     </ul>
-        <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
-            <div class="form-group">
-                <div class="input-group">
-<span class="input-group-btn">
-<button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
-</span>
-                    <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
-                </div>
-            </div>
-        </form>
-        <div class="navbar-right ">
-            <ul class="nav navbar-nav m-n hidden-xs nav-user user">
-                <li class="hidden-xs">
-                    <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
-                        <i class="icon-bell"></i>
-                        <span class="badge badge-sm up bg-danger count">2</span>
-                    </a>
-                    <section class="dropdown-menu aside-xl animated fadeInUp">
-                        <section class="panel bg-white">
-                            <div class="panel-heading b-light bg-light">
-                                <strong>You have <span class="count">2</span> notifications</strong>
-                            </div>
-                            <div class="list-group list-group-alt">
-                                <a href="#" class="media list-group-item">
-<span class="pull-left thumb-sm">
-<img src="images/a0.png" alt="..." class="img-circle">
-</span>
-                                    <span class="media-body block m-b-none">
-Use awesome animate.css<br>
-<small class="text-muted">10 minutes ago</small>
-</span>
-                                </a>
-                                <a href="#" class="media list-group-item">
-<span class="media-body block m-b-none">
-1.0 initial released<br>
-<small class="text-muted">1 hour ago</small>
-</span>
-                                </a>
-                            </div>
-                            <div class="panel-footer text-sm">
-                                <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
-                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
-                            </div>
-                        </section>
-                    </section>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
-<span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-<img src="images/a0.png" alt="...">
-</span>
-                        John.Smith <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight">
-                        <li>
-                            <span class="arrow top"></span>
-                            <a href="#">Settings</a>
-                        </li>
-                        <li>
-                            <a href="profile.html">Profile</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="badge bg-danger pull-right">3</span>
-                                Notifications
-                            </a>
-                        </li>
-                        <li>
-                            <a href="docs.html">Help</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <section>
-        <section class="hbox stretch">
+</div>
+<script>
+    (function(id,t){
+        if(!document.getElementById(id)){return false;}
+        var doc = document,
+            auto='',
+            oId = doc.getElementById(id),
+            IE = /msie (\d+\.\d)/i.test(navigator.userAgent),
+            num = 0,
+            bot = true,
+            setOpacity = function(obj, opacity){
+                if(IE){
+                    obj.style.filter = 'Alpha(Opacity=' + (opacity * 100) + ')';
+                }
+                else{
+                    obj.style.opacity = opacity;
+                };
+            },
+            setBottom = function(obj, bottom){
+                obj.style.bottom = bottom + 'px';
+            },
+            fideIn = function(obj, timeLimit){
+                if(obj.style.display === 'none'){
+                    obj.style.display = 'block';
+                };
+                setOpacity(obj, 0);
+                obj.style.zIndex = 1;
+                if(!timeLimit){
+                    timeLimit = 200;
+                };
+                var opacity = 0,
+                    step = timeLimit / 20;
+                clearTimeout(fideInTime);
+                var fideInTime = setTimeout(function(){
+                    bot = false;
+                    if(opacity >= 1){
+                        bot = true;
+                        return;
+                    };
+                    opacity += 1 / step;
+                    setOpacity(obj, opacity);
+                    fideInTime = setTimeout(arguments.callee, 20);
+                },20);
+            },
+            fideOut = function(obj, timeLimit){
+                if(!timeLimit){
+                    timeLimit = 200;
+                };
+                setOpacity(obj, 1);
+                obj.style.zIndex = 0;
+                var opacity = 1,
+                    step = timeLimit / 20;
+                clearTimeout(fideOutTime);
+                var fideOutTime = setTimeout(function(){
+                    if (opacity <= 0) {
+                        setOpacity(obj, 0);
+                        return;
+                    };
+                    opacity -= 1 / step;
+                    setOpacity(obj, opacity);
+                    fideOutTime = setTimeout(arguments.callee, 20);
 
-            <aside class="bg-black dk aside hidden-print" id="nav">
-                <section class="vbox">
-                    <section class="w-f-md scrollable">
-                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
-
-                            <nav class="nav-primary hidden-xs">
-                                <ul class="nav bg clearfix">
-                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                                        Discover
-                                    </li>
-                                    <li>
-                                        <a href="index.html">
-                                            <i class="icon-disc icon text-success"></i>
-                                            <span class="font-bold">What's new</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="genres.html">
-                                            <i class="icon-music-tone-alt icon text-info"></i>
-                                            <span class="font-bold">Genres</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="events.html">
-                                            <i class="icon-drawer icon text-primary-lter"></i>
-                                            <b class="badge bg-primary pull-right">6</b>
-                                            <span class="font-bold">Events</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="listen.html">
-                                            <i class="icon-list icon  text-info-dker"></i>
-                                            <span class="font-bold">Listen</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
-                                            <i class="icon-social-youtube icon  text-primary"></i>
-                                            <span class="font-bold">Video</span>
-                                        </a>
-                                    </li>
-                                    <li class="m-b hidden-nav-xs"></li>
-                                </ul>
-                                <ul class="nav" data-ride="collapse">
-                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                                        Interface
-                                    </li>
-                                    <li>
-                                        <a href="#" class="auto">
-<span class="pull-right text-muted">
-<i class="fa fa-angle-left text"></i>
-<i class="fa fa-angle-down text-active"></i>
-</span>
-                                            <i class="icon-screen-desktop icon">
-                                            </i>
-                                            <span>Layouts</span>
-                                        </a>
-                                        <ul class="nav dk text-sm">
-                                            <li>
-                                                <a href="layout-color.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Color option</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="layout-boxed.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Boxed layout</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="layout-fluid.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Fluid layout</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="active">
-                                        <a href="#" class="auto">
-<span class="pull-right text-muted">
-<i class="fa fa-angle-left text"></i>
-<i class="fa fa-angle-down text-active"></i>
-</span>
-                                            <i class="icon-chemistry icon">
-                                            </i>
-                                            <span>UI Kit</span>
-                                        </a>
-                                        <ul class="nav dk text-sm">
-                                            <li>
-                                                <a href="buttons.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Buttons</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="icons.html" class="auto">
-                                                    <b class="badge bg-info pull-right">369</b>
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Icons</span>
-                                                </a>
-                                            </li><li>
-                                            <a href="http://www.weidea.net" class="auto">
-                                                <b class="badge bg-info pull-right">369</b>
-                                                <i class="fa fa-angle-right text-xs"></i>
-                                                <span>More</span>
-                                            </a>
-                                        </li>
-                                            <li>
-                                                <a href="grid.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Grid</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="widgets.html" class="auto">
-                                                    <b class="badge bg-dark pull-right">8</b>
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Widgets</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="components.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Components</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="list.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>List group</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#table" class="auto">
-<span class="pull-right text-muted">
-<i class="fa fa-angle-left text"></i>
-<i class="fa fa-angle-down text-active"></i>
-</span>
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Table</span>
-                                                </a>
-                                                <ul class="nav dker">
-                                                    <li>
-                                                        <a href="table-static.html">
-                                                            <i class="fa fa-angle-right"></i>
-                                                            <span>Table static</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="table-datatable.html">
-                                                            <i class="fa fa-angle-right"></i>
-                                                            <span>Datatable</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#form" class="auto">
-<span class="pull-right text-muted">
-<i class="fa fa-angle-left text"></i>
-<i class="fa fa-angle-down text-active"></i>
-</span>
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Form</span>
-                                                </a>
-                                                <ul class="nav dker">
-                                                    <li>
-                                                        <a href="form-elements.html">
-                                                            <i class="fa fa-angle-right"></i>
-                                                            <span>Form elements</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="form-validation.html">
-                                                            <i class="fa fa-angle-right"></i>
-                                                            <span>Form validation</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="form-wizard.html">
-                                                            <i class="fa fa-angle-right"></i>
-                                                            <span>Form wizard</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="chart.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Chart</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="portlet.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Portlet</span>
-                                                </a>
-                                            </li>
-                                            <li class="active">
-                                                <a href="timeline.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Timeline</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="auto">
-<span class="pull-right text-muted">
-<i class="fa fa-angle-left text"></i>
-<i class="fa fa-angle-down text-active"></i>
-</span>
-                                            <i class="icon-grid icon">
-                                            </i>
-                                            <span>Pages</span>
-                                        </a>
-                                        <ul class="nav dk text-sm">
-                                            <li>
-                                                <a href="profile.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Profile</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="blog.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Blog</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="invoice.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Invoice</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="gmap.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Google Map</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="jvectormap.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Vector Map</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="signin.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Signin</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="signup.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>Signup</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="404.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>404</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <ul class="nav text-sm">
-                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                                        <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                                        Playlist
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-music-tone icon"></i>
-                                            <span>Hip-Pop</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-playlist icon text-success-lter"></i>
-                                            <b class="badge bg-success dker pull-right">9</b>
-                                            <span>Jazz</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                    </section>
-                    <footer class="footer hidden-xs no-padder text-center-nav-xs">
-                        <div class="bg hidden-xs ">
-                            <div class="dropdown dropup wrapper-sm clearfix">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-<span class="thumb-sm avatar pull-left m-l-xs">
-<img src="images/a3.png" class="dker" alt="...">
-<i class="on b-black"></i>
-</span>
-                                    <span class="hidden-nav-xs clear">
-<span class="block m-l">
-<strong class="font-bold text-lt">John.Smith</strong>
-<b class="caret"></b>
-</span>
-<span class="text-muted text-xs block m-l">Art Director</span>
-</span>
-                                </a>
-                                <ul class="dropdown-menu animated fadeInRight aside text-left">
-                                    <li>
-                                        <span class="arrow bottom hidden-nav-xs"></span>
-                                        <a href="#">Settings</a>
-                                    </li>
-                                    <li>
-                                        <a href="profile.html">Profile</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <span class="badge bg-danger pull-right">3</span>
-                                            Notifications
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="docs.html">Help</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div> </footer>
-                </section>
-            </aside>
-
-            <section id="content">
-                <section class="hbox stretch">
-
-                    <aside class="aside-lg bg-light b-r" id="aside">
-                        <div class="wrapper">
-                            <h4 class="m-t-none">Timeline</h4>
-                            <form>
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" placeholder="Event name" class="input-sm form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Date</label>
-                                    <input type="text" placeholder="Event name" class="datepicker input-sm form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Time</label>
-                                    <input type="text" placeholder="eg. 3:00 pm" class="input-sm form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label>Type</label>
-                                    <div>
-                                        <div class="btn-group">
-                                            <button data-toggle="dropdown" class="btn btn-sm btn-default dropdown-toggle">
-                                                <span class="dropdown-label">Choose a type</span>
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu dropdown-select">
-                                                <li><input type="radio" name="d-s-r"><a href="#">Travel</a></li>
-                                                <li class=""><input type="radio" name="d-s-r"><a href="#">Phone</a></li>
-                                                <li class=""><input type="radio" name="d-s-r"><a href="#">Meeting</a></li>
-                                                <li class=""><input type="radio" name="d-s-r"><a href="#">Appointment</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="m-t-lg"><button class="btn btn-sm btn-default">Add an event</button></div>
-                            </form>
-                        </div>
-                    </aside>
-
-
-                    <aside>
-                        <section class="vbox">
-                            <section class="scrollable wrapper">
-                                <div class="timeline">
-                                    <article class="timeline-item active">
-                                        <div class="timeline-caption">
-                                            <div class="panel bg-primary lt no-borders">
-                                                <div class="panel-body">
-                                                    <span class="timeline-icon"><i class="fa fa-bell-o time-icon bg-primary"></i></span>
-                                                    <span class="timeline-date">7:30 am</span>
-                                                    <div class="text-sm">Wake up</div>
-                                                    <h5>Me</h5>
-                                                    <div class="m-t-sm timeline-action">
-                                                        <span class="h3 pull-left m-r-sm">4:51</span>
-                                                        <button class="btn btn-sm btn-default btn-bg"><i class="fa fa-pause"></i> Pause</button>
-                                                        <button class="btn btn-sm btn-default btn-bg"><i class="fa fa-check"></i> Confirm</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="timeline-item">
-                                        <div class="timeline-caption">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <span class="arrow left"></span>
-                                                    <span class="timeline-icon"><i class="fa fa-phone time-icon bg-primary"></i></span>
-                                                    <span class="timeline-date">12:25 am</span>
-                                                    <div class="text-sm">Call to</div>
-                                                    <h5>
-                                                        Jason Cokde (021-254-3523)
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="timeline-item alt">
-                                        <div class="timeline-caption">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <span class="arrow right"></span>
-                                                    <span class="timeline-icon"><i class="fa fa-male time-icon bg-success"></i></span>
-                                                    <span class="timeline-date">10:00 am</span>
-                                                    <div class="text-sm">Appointment</div>
-                                                    <h5>
-                                                        Carmark Sook (.inc company)
-                                                    </h5>
-                                                    <p>Morbi nec nunc condimentum, egestas dui nec, </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="timeline-item">
-                                        <div class="timeline-caption">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <span class="arrow left"></span>
-                                                    <span class="timeline-icon"><i class="fa fa-plane time-icon bg-dark"></i></span>
-                                                    <span class="timeline-date">8:00 am</span>
-                                                    <div class="text-sm">Fly to</div>
-                                                    <h5>
-                                                        Newyork City
-                                                    </h5>
-                                                    <p>82°, Very hot with some sun</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="timeline-item alt">
-                                        <div class="timeline-caption">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <span class="arrow right"></span>
-                                                    <span class="timeline-icon"><i class="fa fa-file-text time-icon bg-info"></i></span>
-                                                    <span class="timeline-date">9:30 am</span>
-                                                    <div class="text-sm">Meeting</div>
-                                                    <h5>
-                                                        Office A - 2 floor
-                                                    </h5>
-                                                    <p>Iaculis lorem justo porttitor orci. Vivamus vestibulum tortor augue. Donec elementum mollis velit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="timeline-item">
-                                        <div class="timeline-caption">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body">
-                                                    <span class="arrow left"></span>
-                                                    <span class="timeline-icon"><i class="fa fa-code time-icon bg-dark"></i></span>
-                                                    <span class="timeline-date">9:00 am</span>
-                                                    <div class="text-sm">Work on</div>
-                                                    <h5>
-                                                        Web application project
-                                                    </h5>
-                                                    <p>Iaculis lorem justo porttitor orci. Donec elementum mollis velit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <div class="timeline-footer"><a href="#"><i class="fa fa-plus time-icon inline-block bg-dark"></i></a></div>
-                                </div>
-                            </section>
-                        </section>
-                    </aside>
-
-                </section>
-                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
-            </section>
-        </section>
-    </section>
-</section>
-<script src="js/jquery.min.js"></script>
-
-<script src="js/bootstrap.js"></script>
-
-<script src="js/app.js"></script>
-<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="js/app.plugin.js"></script>
-<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
-<script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
-<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+                },20);
+            },
+            heightIn = function(obj, timeLimit){
+                if(obj.style.display === 'none'){
+                    obj.style.display = 'block';
+                };
+                setBottom(obj, -40);
+                if(!timeLimit){
+                    timeLimit = 200;
+                };
+                var bottom = -40,
+                    step = timeLimit / 20;
+                clearTimeout(heightInTime);
+                var heightInTime = setTimeout(function(){
+                    if(bottom >= 8){
+                        setBottom(obj, 8);
+                        return;
+                    };
+                    bottom += 28 / step;
+                    setBottom(obj, bottom);
+                    heightInTime = setTimeout(arguments.callee, 20);
+                },20);
+            },
+            heightOut = function(obj, timeLimit){
+                if(!timeLimit){
+                    timeLimit = 200;
+                };
+                setBottom(obj, 8);
+                var bottom = 8,
+                    step = timeLimit / 20;
+                clearTimeout(heightOutTime);
+                var heightOutTime = setTimeout(function(){
+                    if(bottom <= -40){
+                        setBottom(obj, -40);
+                        return;
+                    };
+                    bottom -= 28 / step;
+                    setBottom(obj, bottom);
+                    heightOutTime = setTimeout(arguments.callee, 20);
+                },20);
+            },
+            getClass = function(oElem, strTagName, strClassName){
+                var arrElements = (strTagName == '*' && oElem.all) ? oElem.all : oElem.getElementsByTagName(strTagName);
+                var returnArrElements = new Array();
+                var oRegExp =  new RegExp('(^|\\s)' + strClassName + '($|\\s)');
+                for(var i=0; i<arrElements.length; i++){
+                    if(oRegExp.test(arrElements[i].className)){
+                        returnArrElements.push(arrElements[i]);
+                    }
+                }
+                return (returnArrElements);
+            },
+            createElement = function(tag, id, cla){
+                var elem = document.createElement(tag);
+                if(id && id !== ""){
+                    elem.id = id;
+                }
+                if(cla && cla !== ""){
+                    elem.className = cla;
+                }
+                return elem;
+            },
+            showImg = function(n,b){
+                var turnPic = getClass(oId,'ul','turn-pic')[0];
+                var oLi = turnPic.getElementsByTagName('li');
+                var turnTit = getClass(oId,'ul','turn-tit')[0];
+                var oLi2 = turnTit.getElementsByTagName('li');
+                var turnBtn = getClass(oId,'div','turn-btn')[0];
+                var oSpan = turnBtn.getElementsByTagName('span')[0];
+                fideIn(oLi[n],300);
+                heightIn(oLi2[n],300);
+                oSpan.innerHTML = (n+1)+'/'+oLi.length;
+                if(b==true){
+                    if(n==oLi.length-1){
+                        fideOut(oLi[0],300);
+                        heightOut(oLi2[0],300);
+                    }
+                    if(n<oLi.length-1){
+                        fideOut(oLi[n+1],300);
+                        heightOut(oLi2[n+1],300);
+                    }
+                }
+                else{
+                    if(n>0){
+                        fideOut(oLi[n-1],300);
+                        heightOut(oLi2[n-1],300);
+                    }
+                    if(n==0){
+                        fideOut(oLi[oLi.length-1],300);
+                        heightOut(oLi2[oLi2.length-1],300);
+                    }
+                }
+            },
+            addHtml = function(){
+                var oBg = createElement('div','','turn-bg');
+                var oTit = createElement('ul','','turn-tit');
+                var oBtn = createElement('div','','turn-btn');
+                var turnPic = getClass(oId,'ul','turn-pic')[0];
+                var oA = turnPic.getElementsByTagName('a');
+                var oImg = turnPic.getElementsByTagName('img');
+                for(var i=0,len=oA.length;i<len;i++){
+                    oTit.innerHTML += '<li><a href="'+ oA[i].href +'">'+ oImg[i].title +'</a></li>';
+                }
+                oBtn.innerHTML = '<div class="lb"></div><div class="rb"></div><span></span>';
+                oId.appendChild(oBg);
+                oId.appendChild(oTit);
+                oId.appendChild(oBtn);
+            },
+            init = function(){
+                addHtml();
+                showImg(0);
+                var turnLoading = getClass(oId,'div','turn-loading')[0];
+                oId.removeChild(turnLoading);
+                oId.onmouseover = function(){
+                    clearInterval(auto);
+                };
+                oId.onmouseout = function(){
+                    auto = setInterval(autoTurn, t*1000);
+                };
+                var turnPic = getClass(oId,'ul','turn-pic')[0];
+                var oLi = turnPic.getElementsByTagName('li');
+                var oLb = getClass(oId,'div','lb')[0];
+                var oRb = getClass(oId,'div','rb')[0];
+                oLb.onmouseover = function(){
+                    this.style.backgroundPosition = '-12px 0';
+                }
+                oLb.onmouseout = function(){
+                    this.style.backgroundPosition = '0 0';
+                }
+                oLb.onclick = function(){
+                    if(!bot){ return false; }
+                    if(num==0){
+                        num = oLi.length-1;
+                    }
+                    else{
+                        num = num - 1;
+                    }
+                    showImg(num,1);
+                }
+                oRb.onmouseover = function(){
+                    this.style.backgroundPosition = '-18px 0';
+                }
+                oRb.onmouseout = function(){
+                    this.style.backgroundPosition = '-6px 0';
+                }
+                oRb.onclick = function(){
+                    if(!bot){ return false; }
+                    if(num==oLi.length-1){
+                        num = 0;
+                    }
+                    else{
+                        num = num + 1;
+                    }
+                    showImg(num);
+                }
+            },
+            autoTurn=function(){
+                var turnPic = getClass(oId,'ul','turn-pic')[0];
+                var oLi = turnPic.getElementsByTagName('li');
+                if(num==oLi.length-1){
+                    num = 0;
+                }
+                else{
+                    num = num + 1;
+                }
+                showImg(num);
+            };
+        init();
+        auto = setInterval(autoTurn, t*1000);
+    })('turn',3);
+</script>
 </body>
 </html>

@@ -31,7 +31,10 @@ public class LoginServlet extends HttpServlet {
 
         if(result.equals("DIN")) printWriter.append("{\"result\":\"1\"}");
         else {
-            if(result.equals(password)) printWriter.append("{\"result\":\"0\"}");
+            if(result.equals(password)) {
+                String list = user.listUser(account);
+                printWriter.append("{\"result\":\"0\", \"message\":"+list+"}");
+            }
             else printWriter.append("{\"result\":\"2\"}");
         }
     }

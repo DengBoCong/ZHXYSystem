@@ -17,5 +17,38 @@
         <property name="email">
             <column name="email" sql-type="varchar(100)" length="100"/>
         </property>
+        <property name="address">
+            <column name="address" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="image">
+            <column name="image" sql-type="varchar(200)" length="200"/>
+        </property>
+        <property name="rank">
+            <column name="rank" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="numberOfFan">
+            <column name="numberOfFan" sql-type="int(11)"/>
+        </property>
+        <property name="numberOfFollow">
+            <column name="numberOfFollow" sql-type="int(11)"/>
+        </property>
+        <property name="profile">
+            <column name="profile" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="signature">
+            <column name="signature" sql-type="varchar(200)" length="200" />
+        </property>
+        <property name="electronicCurrency">
+            <column name="electronicCurrency" sql-type="int(11)"/>
+        </property>
+        <property name="mutualAidIntegral">
+            <column name="mutualAidIntegral" sql-type="int(11)" />
+        </property>
+        <property name="competitivePoint">
+            <column name="competitivePoint" sql-type="int(11)" />
+        </property>
     </class>
 </hibernate-mapping>

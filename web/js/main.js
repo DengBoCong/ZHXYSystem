@@ -102,13 +102,18 @@ function beforeSend() {
 //各种请求的回调方法
 function successLoginCallBack(responseData) {
     if(responseData.result == 0) {
-        /*sessionStorage.setItem("account")*/
-        window.location.href = "../index.jsp"
+        /*sessionStorage.setItem("loginUserMessage", responseData.message);
+        window.location.href = "../index.jsp"*/
+        alert(responseData.message);
     }
     else alert("账号或密码输入错误");
 }
 
 function successRegisterCallBack(responseData) {
-    if(responseData.result == 0) alert("注册成功");
+    if(responseData.result == 0){
+        /*sessionStorage.setItem("loginUserMessage", responseData.message);
+        window.location.href = "../index.jsp"*/
+        alert(responseData.message);
+    }
     else alert("账号已存在");
 }

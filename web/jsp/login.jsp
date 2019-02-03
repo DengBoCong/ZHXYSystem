@@ -53,7 +53,7 @@
         <div class="login-button">
             登陆
         </div>
-        <div class="go_register">
+        <div class="go_register" style="cursor:pointer;">
             没有账号？前往注册>>
         </div>
     </div>
@@ -93,7 +93,7 @@
         <div class="register-button">
             注册
         </div>
-        <div class="go_login">
+        <div class="go_login" style="cursor:pointer;">
             已有账号？前往登录>>
         </div>
     </div>

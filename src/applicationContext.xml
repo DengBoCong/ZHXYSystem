@@ -34,16 +34,25 @@
             <list>
                 <value>classpath:com/dbc/ZHXYSystem/Entity/UserEntity.hbm.xml</value>
                 <value>classpath:com/dbc/ZHXYSystem/Entity/UserEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/MainnoticeEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/MainwheelnoticeEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/UserEntity.hbm.xml</value>
             </list>
         </property>
         <property name="annotatedClasses">
             <list>
                 <value>com.dbc.ZHXYSystem.Entity.UserEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.MainnoticeEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.MainwheelnoticeEntity</value>
             </list>
         </property>
     </bean>
 
     <bean class="com.dbc.ZHXYSystem.Dao.UserDao" id="userDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+
+    <bean class="com.dbc.ZHXYSystem.Dao.MainNoticeDao" id="mainNoticeDao">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 </beans>

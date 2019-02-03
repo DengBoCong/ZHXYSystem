@@ -262,7 +262,7 @@
             <div class="row">
                 <div class="span6">
                     <p class="copyright">
-                        Copyright &copy; 2019.Momeng.All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+                        Copyright &copy; 2019.Momeng.All rights reserved.
                     </p>
                 </div>
                 <%--<div class="span6">
