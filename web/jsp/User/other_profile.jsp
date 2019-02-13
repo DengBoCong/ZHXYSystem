@@ -63,7 +63,7 @@
                         <li class="current-menu-item"><a href="<%=basePath%>/index.jsp">首页</a></li>
                         <li><a href="<%=basePath%>/jsp/shop/shop.jsp">二手商圈</a></li>
                         <li><a href="<%=basePath%>/jsp/helpKind.jsp">互助圈</a></li>
-                        <li><a href="<%=basePath%>/jsp/compete.jsp">竞赛圈</a></li>
+                        <li><a href="<%=basePath%>/jsp/compete/compete.jsp">竞赛圈</a></li>
                         <li><a href="faq.html">就业圈</a></li>
                         <li><a href="#">排行榜</a>
                             <ul class="sub-menu" style="z-index: 100000;margin-left: -30px;">
@@ -80,7 +80,7 @@
                                 <li><a href="page.html">学术圈</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=basePath%>/jsp/confession.jsp">表白墙</a></li>
+                        <li><a href="<%=basePath%>/jsp/confession/confession.jsp">表白墙</a></li>
                         <li><a href="#"><img src="<%=basePath%>/img/person.jpeg" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
                             <ul class="sub-menu" style="z-index: 100000;margin-left: -50px;">
                                 <li><a href="full-width.html">ID: DBC</a></li>

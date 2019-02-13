@@ -11,6 +11,10 @@ import java.util.Objects;
  **/
 @Entity
 @Table(name = "mainwheelnotice", schema = "zhxysystem", catalog = "")
+@NamedQueries({
+        @NamedQuery(name = "Mainwheelnotice.findAll",
+        query = "SELECT mainwheelnoticeEntity FROM MainwheelnoticeEntity mainwheelnoticeEntity")
+})
 public class MainwheelnoticeEntity {
     private int id;
     private String image;

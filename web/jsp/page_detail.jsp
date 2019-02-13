@@ -53,14 +53,14 @@
 
 <body>
 <!-- Start of Header -->
-<div class="header-wrapper" >
+<div class="header-wrapper">
     <header>
         <div class="container">
 
 
             <div class="logo-container">
                 <!-- Website Logo -->
-                <a href="index-2.html"  title="陌梦工作室">
+                <a href="<%=basePath%>/index.jsp"  title="陌梦工作室">
                     <img src="<%=basePath%>/img/new_logo.png" alt="陌梦工作室">
                 </a>
                 <span class="tag-line">基于数据云的智慧校园平台</span>
@@ -74,10 +74,10 @@
                         <li class="current-menu-item"><a href="<%=basePath%>/index.jsp">首页</a></li>
                         <li><a href="<%=basePath%>/jsp/shop/shop.jsp">二手商圈</a></li>
                         <li><a href="<%=basePath%>/jsp/helpKind.jsp">互助圈</a></li>
-                        <li><a href="<%=basePath%>/jsp/compete.jsp">竞赛圈</a></li>
-                        <li><a href="faq.html">就业圈</a></li>
+                        <li><a href="<%=basePath%>/jsp/compete/compete.jsp">竞赛圈</a></li>
+                        <li><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment.jsp">就业圈</a></li>
                         <li><a href="#">排行榜</a>
-                            <ul class="sub-menu" style="z-index: 100000;margin-left: -30px;">
+                            <ul class="sub-menu">
                                 <li><a href="<%=basePath%>/jsp/ranking_list/popularity_ranking_list.jsp">人气排行榜</a></li>
                                 <li><a href="<%=basePath%>/jsp/ranking_list/learning_ranking_list.jsp">学术排行榜</a></li>
                                 <li><a href="<%=basePath%>/jsp/ranking_list/match_ranking_list.jsp">赛事排行榜</a></li>
@@ -85,20 +85,21 @@
                             </ul>
                         </li>
                         <li><a href="#">更多圈子</a>
-                            <ul class="sub-menu" style="z-index: 100000;margin-left: -30px;">
-                                <li><a href="full-width.html">考研圈</a></li>
-                                <li><a href="elements.html">创业圈</a></li>
-                                <li><a href="page.html">学术圈</a></li>
+                            <ul class="sub-menu">
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">考研圈</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">创业圈</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">学术圈</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=basePath%>/jsp/confession.jsp">表白墙</a></li>
-                        <li><a href="#"><img src="<%=basePath%>/img/person.jpeg" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
-                            <ul class="sub-menu" style="z-index: 100000;margin-left: -50px;">
-                                <li><a href="full-width.html">ID: DBC</a></li>
-                                <li><a href="<%=basePath%>/jsp/User/profile.jsp">我的消息</a></li>
+                        <li><a href="<%=basePath%>/jsp/confession/confession.jsp">表白墙</a></li>
+                        <li id="loginRegister"><a href="<%=basePath%>/jsp/login.jsp">登录/注册</a></li>
+                        <li id="logining">
+                            <a href="#"><img id="loginUserImage" src="" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
+                            <ul class="sub-menu">
+                                <li><a href="<%=basePath%>/jsp/User/my_message.jsp">我的消息</a></li>
                                 <li><a href="<%=basePath%>/jsp/User/profile.jsp">个人中心</a></li>
-                                <li><a href="elements.html">帮助</a></li>
-                                <li><a href="page.html">退出登录</a></li>
+                                <li><a href="<%=basePath%>/jsp/helpQuestion.jsp">帮助</a></li>
+                                <li id="outLogin"><a href="#">退出登录</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -205,7 +206,7 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="layout-color.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>发布的商品</span>
                                                 </a>
@@ -224,19 +225,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="buttons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>求助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="icons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>帮助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="http://www.weidea.net" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>积分</span>
@@ -255,19 +256,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li class="active">
-                                                <a href="profile.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>发布的竞赛</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="gmap.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>榜次</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="invoice.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>竞技点</span>
@@ -310,12 +311,13 @@
                             <div class="col-sm-9">
                                 <div class="blog-post">
                                     <div class="post-item">
-                                        <div class="post-media">
-                                            <img src="<%=basePath%>/img/user/m42.jpg" class="img-full">
-                                        </div>
+                                        <%--<div class="post-media">
+
+                                        </div>--%>
                                         <div class="caption wrapper-lg">
-                                            <h2 class="post-title"><a href="#">关于平面设计你需要知道的7件事</a></h2>
+                                            <h2 class="post-title"><a href="#">喜欢写小说的看过来！！！</a></h2>
                                             <div class="post-sum">
+                                                <img src="<%=basePath%>/img/user/m42.jpg" class="img-full">
                                                 <p>洛雷姆·伊普索姆·多尔·西特·阿美，神圣的爱的精英。内克码头的摩比。软性病患者的症状。前庭乌兰姆科珀Sodales nisi nec调味品。毛里斯康瓦利斯毛里斯佩伦特斯克沃尔帕特。
                                                     <br><br>
                                                     洛雷姆·伊普索姆·多尔·西特·阿美，神圣的爱的精英。内克码头的摩比。软性病患者的症状。前庭乌兰姆科珀Sodales nisi nec调味品。毛里斯康瓦利斯毛里斯佩伦特斯克沃尔帕特。
@@ -358,7 +360,7 @@
                                                     24 分钟前
                                                 </span>
                                             </header>
-                                            <div class="m-t-sm">洛雷姆·伊普索姆·多尔·西特·阿美，神圣的爱的精英。内克码头的摩比。软性病患者的症状。前庭。</div>
+                                            <div class="m-t-sm">人们在最青春的岁月里挥霍青春，只盼望回首，不要遗憾。愿你与再见的遇见与再见不留遗憾。</div>
                                         </section>
                                     </article>
 
@@ -374,7 +376,7 @@
                                                     26 分钟前
                                                 </span>
                                             </header>
-                                            <div class="m-t-sm">洛雷姆·伊普索姆·多尔·西特·阿米特，一个非常优秀的人，一个非常优秀的人。</div>
+                                            <div class="m-t-sm">感觉像流水账，读者又不是要看庸俗的生活，你大可不必硬搬一切上你的作品。</div>
                                         </section>
                                     </article>
 
@@ -391,10 +393,10 @@
                                                 </span>
                                             </header>
                                             <blockquote class="m-t">
-                                                <p>洛雷姆·伊普索姆·多尔·西特·阿美，神圣的爱的精英。整数预测等于前。</p>
-                                                <small>有人在 <cite title="Source Title">源标题</cite></small>
+                                                <p>这个故事是讲青涩青春的爱恋，虽然没有什么钩心斗角情节，但也并不是庸俗的生活。</p>
+                                                <small>来自 <cite title="Source Title">《只有你能说再见》</cite></small>
                                             </blockquote>
-                                            <div class="m-t-sm">洛雷姆·伊普索姆·多尔·西特·阿米特，一个非常优秀的人，一个非常优秀的人。</div>
+                                            <div class="m-t-sm">故事没啥亮点，还是老套路，这就是庸俗。</div>
                                         </section>
                                     </article>
                                 </section>
@@ -423,50 +425,50 @@
                                 <h5 class="font-bold">分类</h5>
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">15</span>
                                             技术控
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">30</span>
                                             旅行
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">9</span>
                                             文字控
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">30</span>
                                             音乐控
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">9</span>
                                             公益
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                             <span class="badge pull-right">4</span>
                                             电子竞技
                                         </a>
                                     </li>
                                     <li class="list-group-item">
-                                    <a href="#">
+                                    <a href="<%=basePath%>/jsp/classification/main_class.jsp">
                                         <span class="badge pull-right">4</span>
                                         体能运动
                                     </a>
                                     </li>
                                 </ul>
                                 <div class="tags m-b-lg l-h-2x">
-                                    <a href="#" class="label bg-primary">英雄联盟</a> <a href="#" class="label bg-primary">机器人</a> <a href="#" class="label bg-primary">小说</a> <a href="#" class="label bg-primary">王者荣耀</a> <a href="#" class="label bg-primary">软件开发</a> <a href="#" class="label bg-primary">羽毛球</a>
+                                    <a href="<%=basePath%>/jsp/classification/main_class.jsp" class="label bg-primary">英雄联盟</a> <a href="#" class="label bg-primary">机器人</a> <a href="#" class="label bg-primary">小说</a> <a href="#" class="label bg-primary">王者荣耀</a> <a href="#" class="label bg-primary">软件开发</a> <a href="#" class="label bg-primary">羽毛球</a>
                                 </div>
                                 <h5 class="font-bold">热门圈子</h5>
                                 <div>
@@ -548,5 +550,20 @@
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/add-on/jplayer.playlist.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/demo.js"></script>
+<script type="text/javascript">
+    <%--判断是否登录--%>
+    if(sessionStorage.getItem("loginUserMessage") == "null" || sessionStorage.getItem("loginUserMessage") == null){
+        $("#logining").css("display", "none");
+    }else{
+        var loginUserMessage = JSON.parse(sessionStorage.getItem("loginUserMessage"));
+        $("#loginRegister").css("display", "none");
+        $("#loginUserImage").attr("src", loginUserMessage.image);
+    }
+    $("#outLogin").click(function () {
+        sessionStorage.setItem("loginUserMessage", null);
+        $("#logining").css("display", "none");
+        $("#loginRegister").css("display", "inline");
+    });
+</script>
 </body>
 </html>

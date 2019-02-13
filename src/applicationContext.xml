@@ -37,6 +37,11 @@
                 <value>classpath:com/dbc/ZHXYSystem/Entity/MainnoticeEntity.hbm.xml</value>
                 <value>classpath:com/dbc/ZHXYSystem/Entity/MainwheelnoticeEntity.hbm.xml</value>
                 <value>classpath:com/dbc/ZHXYSystem/Entity/UserEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/ClassificationEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/EnthusiastictipsEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/HotsearchoperatorEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/RecommendEntity.hbm.xml</value>
+                <value>classpath:com/dbc/ZHXYSystem/Entity/TopicofconversationEntity.hbm.xml</value>
             </list>
         </property>
         <property name="annotatedClasses">
@@ -44,6 +49,11 @@
                 <value>com.dbc.ZHXYSystem.Entity.UserEntity</value>
                 <value>com.dbc.ZHXYSystem.Entity.MainnoticeEntity</value>
                 <value>com.dbc.ZHXYSystem.Entity.MainwheelnoticeEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.ClassificationEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.EnthusiastictipsEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.HotsearchoperatorEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.RecommendEntity</value>
+                <value>com.dbc.ZHXYSystem.Entity.TopicofconversationEntity</value>
             </list>
         </property>
     </bean>
@@ -52,7 +62,25 @@
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 
-    <bean class="com.dbc.ZHXYSystem.Dao.MainNoticeDao" id="mainNoticeDao">
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.ClassificationDao" id="classificationDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.EnthusiasticTipsDao" id="enthusiasticTipsDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.HotSearchOperatorDao" id="hotSearchOperatorDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.MainWheelNoticeDao" id="mainWheelNoticeDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.MainNoticeDao" id="mainNoticeDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.RecommendDao" id="recommendDao">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean class="com.dbc.ZHXYSystem.Dao.Main.TopicOfConversationDao" id="topicOfConversationDao">
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 </beans>

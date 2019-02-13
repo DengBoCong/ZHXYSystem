@@ -51,7 +51,7 @@
 
             <div class="logo-container">
                 <!-- Website Logo -->
-                <a href="index-2.html"  title="陌梦工作室">
+                <a href="<%=basePath%>/index.jsp"  title="陌梦工作室">
                     <img src="<%=basePath%>/img/new_logo.png" alt="陌梦工作室">
                 </a>
                 <span class="tag-line">基于数据云的智慧校园平台</span>
@@ -65,8 +65,8 @@
                         <li class="current-menu-item"><a href="<%=basePath%>/index.jsp">首页</a></li>
                         <li><a href="<%=basePath%>/jsp/shop/shop.jsp">二手商圈</a></li>
                         <li><a href="<%=basePath%>/jsp/helpKind.jsp">互助圈</a></li>
-                        <li><a href="<%=basePath%>/jsp/compete.jsp">竞赛圈</a></li>
-                        <li><a href="faq.html">就业圈</a></li>
+                        <li><a href="<%=basePath%>/jsp/compete/compete.jsp">竞赛圈</a></li>
+                        <li><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment.jsp">就业圈</a></li>
                         <li><a href="#">排行榜</a>
                             <ul class="sub-menu">
                                 <li><a href="<%=basePath%>/jsp/ranking_list/popularity_ranking_list.jsp">人气排行榜</a></li>
@@ -77,19 +77,20 @@
                         </li>
                         <li><a href="#">更多圈子</a>
                             <ul class="sub-menu">
-                                <li><a href="full-width.html">考研圈</a></li>
-                                <li><a href="elements.html">创业圈</a></li>
-                                <li><a href="page.html">学术圈</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">考研圈</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">创业圈</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/404.jsp">学术圈</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=basePath%>/jsp/confession.jsp">表白墙</a></li>
-                        <li><a href="#"><img src="<%=basePath%>/img/person.jpeg" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
+                        <li><a href="<%=basePath%>/jsp/confession/confession.jsp">表白墙</a></li>
+                        <li id="loginRegister"><a href="<%=basePath%>/jsp/login.jsp">登录/注册</a></li>
+                        <li id="logining">
+                            <a href="#"><img id="loginUserImage" src="" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
                             <ul class="sub-menu">
-                                <li><a href="full-width.html">ID: DBC</a></li>
-                                <li><a href="<%=basePath%>/jsp/User/profile.jsp">我的消息</a></li>
+                                <li><a href="<%=basePath%>/jsp/User/my_message.jsp">我的消息</a></li>
                                 <li><a href="<%=basePath%>/jsp/User/profile.jsp">个人中心</a></li>
-                                <li><a href="elements.html">帮助</a></li>
-                                <li><a href="page.html">退出登录</a></li>
+                                <li><a href="<%=basePath%>/jsp/helpQuestion.jsp">帮助</a></li>
+                                <li id="outLogin"><a href="#">退出登录</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -485,6 +486,21 @@
 <script type='text/javascript' src='<%=basePath%>/js/custom.js'></script>
 <script type="text/javascript" src="<%=basePath%>/js/select/city.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/select/index.js"></script>
+<script type="text/javascript">
+    <%--判断是否登录--%>
+    if(sessionStorage.getItem("loginUserMessage") == "null" || sessionStorage.getItem("loginUserMessage") == null){
+        $("#logining").css("display", "none");
+    }else{
+        var loginUserMessage = JSON.parse(sessionStorage.getItem("loginUserMessage"));
+        $("#loginRegister").css("display", "none");
+        $("#loginUserImage").attr("src", loginUserMessage.image);
+    }
+    $("#outLogin").click(function () {
+        sessionStorage.setItem("loginUserMessage", null);
+        $("#logining").css("display", "none");
+        $("#loginRegister").css("display", "inline");
+    });
+</script>
 </body>
 </html>
 

@@ -13,11 +13,11 @@ function request(method,url,data,successCallBack,errorCallBack,async,beforeSendF
 }
 
 function showMessage(responseData){
-	// console.log("showMessage", responseData);
+    // console.log("showMessage", responseData);
 //    可以利用这个检查出错情况
 }
 function serverError(XMLHttpRequest, textStatus, errorThrown){
-	/*window.location.href = "../index.jsp"*/
+    /*window.location.href = "../index.jsp"*/
     window.location.href = "../jsp/User/404.jsp"
 }
 
@@ -43,77 +43,6 @@ function hasClass(elem, cls) {
     return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
 }
 
-function checkAccount(account){
-    if(account.value == ""){
-        Tip = Tip + "账号不能为空 ";
-        flag = 2;
-    }else {
-        if(account.value.length != 11){
-            Tip = Tip + "账号应为11位的手机号 ";
-            flag = 2;
-        }else if(!pattern.test(account.value)){
-            Tip = Tip + "无效账号 ";
-            flag = 2;
-        }
-    }
-}
-
-function confimPassword(password, cPassword){
-    if(password.value == ""){
-        Tip = Tip + "密码不能为空 ";
-        flag = 2;
-    }else {
-        if(password.value.length < 6){
-            Tip = Tip + "应输入大于6位的密码 ";
-            flag = 2;
-        }else if(cPassword.value != password.value){
-            Tip = Tip + "两次密码输入不一致 ";
-            flag = 2;
-        }
-    }
-}
-
-function checkPassword(password) {
-    if(password.value == ""){
-        Tip = Tip + "密码不能为空 ";
-        flag = 2;
-    }else {
-        if(password.value.length < 6){
-            Tip = Tip + "应输入大于6位的密码 ";
-            flag = 2;
-        }
-    }
-}
-
-function checkEmail(email){
-    if(email.value == ""){
-        Tip = Tip + "邮箱不能为空 ";
-        flag = 2;
-    }else if(!pattern_email.test(email.value)){
-        Tip = Tip + "邮箱输入有误 ";
-        flag = 2;
-    }
-}
-
 function beforeSend() {
 //    请求动画
-}
-
-//各种请求的回调方法
-function successLoginCallBack(responseData) {
-    if(responseData.result == 0) {
-        /*sessionStorage.setItem("loginUserMessage", responseData.message);
-        window.location.href = "../index.jsp"*/
-        alert(responseData.message);
-    }
-    else alert("账号或密码输入错误");
-}
-
-function successRegisterCallBack(responseData) {
-    if(responseData.result == 0){
-        /*sessionStorage.setItem("loginUserMessage", responseData.message);
-        window.location.href = "../index.jsp"*/
-        alert(responseData.message);
-    }
-    else alert("账号已存在");
 }

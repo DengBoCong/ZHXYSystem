@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.dbc.ZHXYSystem.Entity.EnthusiastictipsEntity" table="enthusiastictips" schema="zhxysystem">
+        <id name="id">
+            <column name="id" sql-type="int(11)" not-null="true"/>
+        </id>
+        <property name="content">
+            <column name="content" sql-type="varchar(200)" length="200"/>
+        </property>
+        <property name="owner">
+            <column name="owner" sql-type="varchar(255)"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.dbc.ZHXYSystem.Entity.RecommendEntity" table="recommend" schema="zhxysystem">
+        <id name="id">
+            <column name="id" sql-type="int(11)" not-null="true"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="varchar(200)" length="200"/>
+        </property>
+        <property name="number">
+            <column name="number" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="owner">
+            <column name="owner" sql-type="varchar(100)" length="100"/>
+        </property>
+    </class>
+</hibernate-mapping>

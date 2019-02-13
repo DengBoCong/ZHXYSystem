@@ -123,23 +123,23 @@
                     <ul class="dropdown-menu animated fadeInRight">
                         <li>
                             <span class="arrow top"></span>
-                            <a href="#">设置</a>
+                            <a href="<%=basePath%>/jsp/User/authentication/authentication.jsp">完善个人资料</a>
                         </li>
                         <li>
-                            <a href="#">个人中心</a>
+                            <a href="<%=basePath%>/jsp/User/profile.jsp">个人中心</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>/jsp/User/my_message.jsp">
                                 <span class="badge bg-danger pull-right">3</span>
                                 我的消息
                             </a>
                         </li>
                         <li>
-                            <a href="docs.html">帮助</a>
+                            <a href="<%=basePath%>/jsp/helpQuestion.jsp">帮助</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a>
+                            <a href="<%=basePath%>/index.jsp" data-toggle="ajaxModal">退出</a>
                         </li>
                     </ul>
                 </li>
@@ -149,9 +149,9 @@
             <a href="<%=basePath%>/index.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">首页</span></a>
             <a href="<%=basePath%>/jsp/shop/shop.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">二手商圈</span></a>
             <a href="<%=basePath%>/jsp/helpKind.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">互助圈</span></a>
-            <a href="<%=basePath%>/jsp/compete.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">竞赛圈</span></a>
-            <span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">就业圈</span>
-            <a href="<%=basePath%>/jsp/confession.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">表白墙</span></a>
+            <a href="<%=basePath%>/jsp/compete/compete.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">竞赛圈</span></a>
+            <a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">就业圈</span></a>
+            <a href="<%=basePath%>/jsp/confession/confession.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">表白墙</span></a>
         </div>
     </header>
     <section>
@@ -174,7 +174,7 @@
                                         </a>
                                     </li>--%>
                                     <li>
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/User/profile.jsp">
                                             <i class="icon-globe icon text-info"></i>
                                             <span class="font-bold">圈子</span>
                                         </a>
@@ -228,19 +228,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="<%=basePath%>/jsp/User/release_commodity.jsp" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/release_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>发布的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%=basePath%>/jsp/User/buy_commodity.jsp" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/buy_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购买的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="<%=basePath%>/jsp/User/shopping_cart.jsp" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/shopping_cart.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购物车</span>
                                                 </a>
@@ -259,19 +259,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="buttons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>求助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="icons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>帮助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="http://www.weidea.net" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>积分</span>
@@ -289,26 +289,14 @@
                                             <span>竞赛</span>
                                         </a>
                                         <ul class="nav dk text-sm">
-                                            <li class="active">
-                                                <a href="profile.html" class="auto">
+                                            <li>
+                                                <a href="<%=basePath%>/jsp/User/compete/compete.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>发布的竞赛</span>
+                                                    <span>赛事控制后台</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="blog.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>参加的竞赛</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="gmap.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>榜次</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="invoice.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>竞技点</span>
@@ -329,7 +317,13 @@
                                         增值服务
                                     </li>
                                     <li>
-                                        <a href="<%=basePath%>/jsp/User/authentication.jsp">
+                                        <a href="<%=basePath%>/jsp/User/valueAddedService/valueAddedService.jsp">
+                                            <i class="icon-user-following icon text-success-lter"></i>
+                                            <span>申请个人对外服务</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<%=basePath%>/jsp/User/authentication/authentication.jsp">
                                             <i class="icon-credit-card icon"></i>
                                             <span>实名认证</span>
                                         </a>
@@ -472,8 +466,8 @@
                                     <header class="header bg-light lt">
                                         <ul class="nav nav-tabs nav-white">
                                             <li class="active"><a href="#activity" data-toggle="tab">帖子</a></li>
-                                            <li class=""><a href="#events" data-toggle="tab">Events</a></li>
-                                            <li class=""><a href="#interaction" data-toggle="tab">Interaction</a></li>
+                                            <li class=""><a href="#events" data-toggle="tab">事迹</a></li>
+                                            <li class=""><a href="#interaction" data-toggle="tab">互动</a></li>
                                         </ul>
                                     </header>
                                     <section class="scrollable">
@@ -485,9 +479,9 @@
                                                             <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                         </a>
                                                         <a href="#" class="clear">
-                                                            <small class="pull-right">3 minuts ago</small>
-                                                            <strong class="block">Drew Wllon</strong>
-                                                            <small>Wellcome and play this web application template ... </small>
+                                                            <small class="pull-right">3 分钟前</small>
+                                                            <strong class="block">喜欢写小说的看过来</strong>
+                                                            <small>关于这篇帖子的一些简洁说明 ... </small>
                                                         </a>
                                                     </li>
                                                     <li class="list-group-item">
@@ -495,9 +489,9 @@
                                                             <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                         </a>
                                                         <a href="#" class="clear">
-                                                            <small class="pull-right">1 hour ago</small>
-                                                            <strong class="block">Jonathan George</strong>
-                                                            <small>Morbi nec nunc condimentum...</small>
+                                                            <small class="pull-right">3 分钟前</small>
+                                                            <strong class="block">有没有一起去旅行的</strong>
+                                                            <small>关于这篇帖子的一些简洁说明 ... </small>
                                                         </a>
                                                     </li>
                                                     <li class="list-group-item">
@@ -505,9 +499,9 @@
                                                             <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                         </a>
                                                         <a href="#" class="clear">
-                                                            <small class="pull-right">2 hours ago</small>
-                                                            <strong class="block">Josh Long</strong>
-                                                            <small>Vestibulum ullamcorper sodales nisi nec...</small>
+                                                            <small class="pull-right">3 小时</small>
+                                                            <strong class="block">值得一看的几部技术书籍</strong>
+                                                            <small>关于这篇帖子的一些简洁说明 ... </small>
                                                         </a>
                                                     </li>
                                                     <li class="list-group-item">
@@ -515,69 +509,9 @@
                                                             <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                         </a>
                                                         <a href="#" class="clear">
-                                                            <small class="pull-right">1 day ago</small>
-                                                            <strong class="block">Jack Dorsty</strong>
-                                                            <small>Morbi nec nunc condimentum...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">3 days ago</small>
-                                                            <strong class="block">Morgen Kntooh</strong>
-                                                            <small>Mobile first web app for startup...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">Jun 21</small>
-                                                            <strong class="block">Yoha Omish</strong>
-                                                            <small>Morbi nec nunc condimentum...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">May 10</small>
-                                                            <strong class="block">Gole Lido</strong>
-                                                            <small>Vestibulum ullamcorper sodales nisi nec...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">Jan 2</small>
-                                                            <strong class="block">Jonthan Snow</strong>
-                                                            <small>Morbi nec nunc condimentum...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item" href="#email-content" data-toggle="class:show">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">3 minuts ago</small>
-                                                            <strong class="block">Drew Wllon</strong>
-                                                            <small>Vestibulum ullamcorper sodales nisi nec sodales nisi nec sodales nisi nec...</small>
-                                                        </a>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="#" class="thumb-sm pull-left m-r-sm">
-                                                            <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
-                                                        </a>
-                                                        <a href="#" class="clear">
-                                                            <small class="pull-right">1 hour ago</small>
-                                                            <strong class="block">Jonathan George</strong>
-                                                            <small>Morbi nec nunc condimentum...</small>
+                                                            <small class="pull-right">3 天前</small>
+                                                            <strong class="block">刚刚上线了技术路线教程</strong>
+                                                            <small>关于这篇帖子的一些简洁说明 ... </small>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -600,19 +534,19 @@
                                 <section class="vbox">
                                     <section class="scrollable padder-v">
                                         <div class="panel">
-                                            <h4 class="font-thin padder">Latest Tweets</h4>
+                                            <h4 class="font-thin padder">关注动态</h4>
                                             <ul class="list-group">
                                                 <li class="list-group-item">
-                                                    <p>Wellcome <a href="#" class="text-info">@Drew Wllon</a> and play this web application template, have fun1 </p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
+                                                    <p>欢迎 <a href="#" class="text-info">@陌梦</a> 推出新版本智慧校园平台，完善各项功能 </p>
+                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 分钟前</small>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <p>Morbi nec <a href="#" class="text-info">@Jonathan George</a> nunc condimentum ipsum dolor sit amet, consectetur</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
+                                                    <p>发布 <a href="#" class="text-info">@时代峰峻</a> 上线新书，名字叫《第一行代码》</p>
+                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 小时前</small>
                                                 </li>
                                                 <li class="list-group-item">
-                                                    <p><a href="#" class="text-info">@Josh Long</a> Vestibulum ullamcorper sodales nisi nec adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis</p>
-                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
+                                                    <p><a href="#" class="text-info">@常陌</a> 使用了阿里数据云，为陌梦官方平台解决了数据并发的问题，授予专家号的称号</p>
+                                                    <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 小时前</small>
                                                 </li>
                                             </ul>
                                         </div>
@@ -622,9 +556,9 @@
                                                     <img src="<%=basePath%>/img/person.jpeg" class="img-circle">
                                                 </a>
                                                 <div class="clear">
-                                                    <a href="#" class="text-info">@Mike Mcalidek <i class="fa fa-twitter"></i></a>
-                                                    <small class="block text-muted">2,415 followers / 225 tweets</small>
-                                                    <a href="#" class="btn btn-xs btn-success m-t-xs">Follow</a>
+                                                    <a href="#" class="text-info">@六一 <i class="fa fa-star"></i></a>
+                                                    <small class="block text-muted">2,415 粉丝 / 225 关注</small>
+                                                    <a href="#" class="btn btn-xs btn-success m-t-xs">关注</a>
                                                 </div>
                                             </div>
                                         </div>

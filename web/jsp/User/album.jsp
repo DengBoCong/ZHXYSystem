@@ -20,7 +20,7 @@
     <meta charset="utf-8" />
     <title>智慧校园-个人中心</title>
     <link rel="shortcut icon" href="<%=basePath%>/img/favicon.png" />
-    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="description" content="基于数据云的智慧校园平台-个人中心" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="<%=basePath%>/js/user/jPlayer/jplayer.flat.css" type="text/css" />
     <link rel="stylesheet" href="<%=basePath%>/css/user/bootstrap.css" type="text/css" />
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="<%=basePath%>/css/user/font.css" type="text/css" />
     <link rel="stylesheet" href="<%=basePath%>/css/user/app.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="<%=basePath%>/css/upload/zyUpload.css" type="text/css" />
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>
@@ -119,23 +120,23 @@
                     <ul class="dropdown-menu animated fadeInRight">
                         <li>
                             <span class="arrow top"></span>
-                            <a href="#">设置</a>
+                            <a href="<%=basePath%>/jsp/User/authentication/authentication.jsp">完善个人资料</a>
                         </li>
                         <li>
-                            <a href="#">个人中心</a>
+                            <a href="<%=basePath%>/jsp/User/profile.jsp">个人中心</a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<%=basePath%>/jsp/User/my_message.jsp">
                                 <span class="badge bg-danger pull-right">3</span>
                                 我的消息
                             </a>
                         </li>
                         <li>
-                            <a href="docs.html">帮助</a>
+                            <a href="<%=basePath%>/jsp/helpQuestion.jsp">帮助</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a>
+                            <a href="<%=basePath%>/index.jsp" data-toggle="ajaxModal">退出</a>
                         </li>
                     </ul>
                 </li>
@@ -145,9 +146,9 @@
             <a href="<%=basePath%>/index.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">首页</span></a>
             <a href="<%=basePath%>/jsp/shop/shop.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">二手商圈</span></a>
             <a href="<%=basePath%>/jsp/helpKind.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">互助圈</span></a>
-            <a href="<%=basePath%>/jsp/compete.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">竞赛圈</span></a>
-            <span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">就业圈</span>
-            <a href="<%=basePath%>/jsp/confession.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">表白墙</span></a>
+            <a href="<%=basePath%>/jsp/compete/compete.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">竞赛圈</span></a>
+            <a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">就业圈</span></a>
+            <a href="<%=basePath%>/jsp/confession/confession.jsp"><span style="text-align: center;width: 70px;height: 55px;display: block;line-height: 55px;float: left;">表白墙</span></a>
         </div>
     </header>
     <section>
@@ -176,7 +177,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/User/album.jsp">
                                             <i class="icon-drawer icon text-primary-lter"></i>
                                             <b class="badge bg-primary pull-right">6</b>
                                             <span class="font-bold">时光机</span>
@@ -224,19 +225,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="layout-color.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/release_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>发布的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="layout-boxed.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/buy_commodity.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购买的商品</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="layout-fluid.html" class="auto">
+                                                <a href="<%=basePath%>/jsp/User/commodity/shopping_cart.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>购物车</span>
                                                 </a>
@@ -255,19 +256,19 @@
                                         </a>
                                         <ul class="nav dk text-sm">
                                             <li>
-                                                <a href="buttons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>求助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="icons.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>帮助</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="http://www.weidea.net" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>积分</span>
@@ -285,26 +286,14 @@
                                             <span>竞赛</span>
                                         </a>
                                         <ul class="nav dk text-sm">
-                                            <li class="active">
-                                                <a href="profile.html" class="auto">
+                                            <li>
+                                                <a href="<%=basePath%>/jsp/User/compete/compete.jsp" class="auto">
                                                     <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>发布的竞赛</span>
+                                                    <span>赛事控制后台</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="blog.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>参加的竞赛</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="gmap.html" class="auto">
-                                                    <i class="fa fa-angle-right text-xs"></i>
-                                                    <span>榜次</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="invoice.html" class="auto">
+                                                <a href="#" class="auto">
                                                     <b class="badge bg-info pull-right">369</b>
                                                     <i class="fa fa-angle-right text-xs"></i>
                                                     <span>竞技点</span>
@@ -313,7 +302,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" class="auto">
+                                        <a href="<%=basePath%>/jsp/User/confession.jsp" class="auto">
                                             <i class="icon-bubbles icon"></i>
                                             <span>表白</span>
                                         </a>
@@ -325,13 +314,19 @@
                                         增值服务
                                     </li>
                                     <li>
-                                        <a href="<%=basePath%>/jsp/User/authentication.jsp">
+                                        <a href="<%=basePath%>/jsp/User/valueAddedService/valueAddedService.jsp">
+                                            <i class="icon-user-following icon text-success-lter"></i>
+                                            <span>申请个人对外服务</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<%=basePath%>/jsp/User/authentication/authentication.jsp">
                                             <i class="icon-credit-card icon"></i>
                                             <span>实名认证</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="<%=basePath%>/jsp/User/recharge.jsp">
                                             <i class="icon-credit-card icon"></i>
                                             <span>充值电子币</span>
                                         </a>
@@ -354,6 +349,7 @@
             <section id="content">
                 <section class="vbox" id="bjax-el">
                     <section class="scrollable padder-lg">
+                        <a href="#modal-form-newAlbum" class="btn btn-success" data-toggle="modal" style="float: right;margin-right: 50px;margin-top: 20px;">新建相册</a>
                         <h2 class="font-thin m-b">杭州之行</h2>
                         <div class="row row-sm">
                             <div class="col-xs-12 col-sm-4">
@@ -646,9 +642,26 @@
 
 <script src="<%=basePath%>/js/user/app.js"></script>
 <script src="<%=basePath%>/js/user/slimscroll/jquery.slimscroll.min.js"></script>
+<div class="modal fade" id="modal-form-newAlbum">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body wrapper-lg">
+                <div class="row">
+                    <section class="scrollable">
+                        <div id="demo" class="demo"></div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="<%=basePath%>/js/user/app.plugin.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/jquery.jplayer.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/add-on/jplayer.playlist.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/js/user/jPlayer/demo.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/upload/zyFile.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/upload/zyUpload.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/upload/jq22.js"></script>
 </body>
 </html>

@@ -121,7 +121,7 @@
 
       <div class="logo-container">
         <!-- Website Logo -->
-        <a href="index-2.html"  title="陌梦工作室">
+        <a href="<%=basePath%>/index.jsp"  title="陌梦工作室">
           <img src="<%=basePath%>/img/new_logo.png" alt="陌梦工作室">
         </a>
         <span class="tag-line">基于数据云的智慧校园平台</span>
@@ -135,8 +135,8 @@
             <li class="current-menu-item"><a href="<%=basePath%>/index.jsp">首页</a></li>
             <li><a href="<%=basePath%>/jsp/shop/shop.jsp">二手商圈</a></li>
             <li><a href="<%=basePath%>/jsp/helpKind.jsp">互助圈</a></li>
-            <li><a href="<%=basePath%>/jsp/compete.jsp">竞赛圈</a></li>
-            <li><a href="faq.html">就业圈</a></li>
+            <li><a href="<%=basePath%>/jsp/compete/compete.jsp">竞赛圈</a></li>
+            <li><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment.jsp">就业圈</a></li>
             <li><a href="#">排行榜</a>
               <ul class="sub-menu">
                 <li><a href="<%=basePath%>/jsp/ranking_list/popularity_ranking_list.jsp">人气排行榜</a></li>
@@ -147,21 +147,20 @@
             </li>
             <li><a href="#">更多圈子</a>
               <ul class="sub-menu">
-                <li><a href="full-width.html">考研圈</a></li>
-                <li><a href="elements.html">创业圈</a></li>
-                <li><a href="page.html">学术圈</a></li>
+                <li><a href="<%=basePath%>/jsp/User/404.jsp">考研圈</a></li>
+                <li><a href="<%=basePath%>/jsp/User/404.jsp">创业圈</a></li>
+                <li><a href="<%=basePath%>/jsp/User/404.jsp">学术圈</a></li>
               </ul>
             </li>
-            <li><a href="<%=basePath%>/jsp/confession.jsp">表白墙</a></li>
-            <li><a href="<%=basePath%>/jsp/login.jsp">登录/注册</a></li>
-            <li style="display: none;">
-                <a href="#"><img src="<%=basePath%>/img/person.jpeg" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
+            <li><a href="<%=basePath%>/jsp/confession/confession.jsp">表白墙</a></li>
+            <li id="loginRegister"><a href="<%=basePath%>/jsp/login.jsp">登录/注册</a></li>
+            <li id="logining">
+                <a href="#"><img id="loginUserImage" src="" style="width: 40px;height: 40px;border-radius: 20px;margin-top: -10px;" alt=""></a>
                 <ul class="sub-menu">
-                    <li><a href="full-width.html">ID: DBC</a></li>
-                    <li><a href="<%=basePath%>/jsp/User/profile.jsp">我的消息</a></li>
+                    <li><a href="<%=basePath%>/jsp/User/my_message.jsp">我的消息</a></li>
                     <li><a href="<%=basePath%>/jsp/User/profile.jsp">个人中心</a></li>
-                    <li><a href="elements.html">帮助</a></li>
-                    <li><a href="page.html">退出登录</a></li>
+                    <li><a href="<%=basePath%>/jsp/helpQuestion.jsp">帮助</a></li>
+                    <li id="outLogin"><a href="#">退出登录</a></li>
                 </ul>
             </li>
           </ul>
@@ -180,10 +179,10 @@
     <h3 class="search-header">这里 应有尽有</h3>
     <p class="search-tag-line">你可以在下面的搜索框搜索你感兴趣的内容 尽情探索智慧的校园吧！</p>
 
-    <form id="search-form" class="search-form clearfix" method="get" action="#" autocomplete="off">
-      <input class="search-term required" type="text" id="s" name="s" placeholder="输入你感兴趣的内容" title="* 请输入你内容!" />
-      <input class="search-btn" type="submit" value="搜索" />
-      <div id="search-error-container"></div>
+    <form id="search-form" class="search-form clearfix">
+      <input class="search-term required" type="text" id="s" name="s" placeholder="输入你感兴趣的内容" title="* 请输入你内容!" value="" />
+      <input id="search-button" class="search-btn" type="button" value="搜索" />
+      <div id="search-error-container" style="color: white;"></div>
     </form>
   </div>
 </div>
@@ -199,16 +198,16 @@
           <div class="swiper_wrap">
               <ul class="font_inner" style="position: relative;top: 0;left: 0;width: 695px;float: right;color: #444;font-size: 14px;margin-top: 1px;">
                   <li style="line-height: 30px;padding-left: 24px;">
-                      <a href="###">本平台将在下一个版本更名为”基于数据云的智慧校园平台“，新版本也将带来全新体验，敬请期待！</a>
+                      <a href="#">本平台将在下一个版本更名为”基于数据云的智慧校园平台“，新版本也将带来全新体验，敬请期待！</a>
                   </li>
                   <li style="line-height: 30px;padding-left: 24px;">
-                      <a href="###">2调用两条新闻并设定时间上下切换（切换时间3秒，点击左右的按钮亦可切换）</a>
+                      <a href="#">每天凌晨0点，准时对平台内数据进行清洗，持续时间为30分钟，届时可能出现数据延时情况！</a>
                   </li>
                   <li style="line-height: 30px;padding-left: 24px;">
-                      <a href="###">3调用两条新闻并设定时间上下切换（切换时间3秒，点击左右的按钮亦可切换）</a>
+                      <a href="#">平台用户首次突破一万，为了感谢用户的支持，平台将推出福利活动，点击个人中心了解详情！</a>
                   </li>
                   <li style="line-height: 30px;padding-left: 24px;">
-                      <a href="###">4调用两条新闻并设定时间上下切换（切换时间3秒，点击左右的按钮亦可切换）</a>
+                      <a href="#">版本主题上线，为用户提供新的特权模式，快来给你喜欢的主题投票吧，平台的主题将由你们决定！</a>
                   </li>
               </ul>
               <a href="javascript:void(0)" class="lt">&lt;</a>
@@ -221,32 +220,32 @@
             <ul class="articles">
               <li class="article-entry standard">
                 <h4><a href="<%=basePath%>/jsp/page_detail.jsp">喜欢写小说的伙伴聚过来！！！</a></h4>
-                <span class="article-meta">2018-1-12 出自 <a href="#" title="View all posts in Server &amp; Database">小说 &amp; 文字控</a></span>
+                <span class="article-meta">2018-1-12 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Server &amp; Database">小说 &amp; 文字控</a></span>
                 <span class="like-count">66</span>
               </li>
               <li class="article-entry standard">
-                <h4><a href="single.html">生活除了诗和远方，还有程序和代码</a></h4>
-                <span class="article-meta">2019-1-2 出自 <a href="#" title="View all posts in Website Dev">技术控</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">生活除了诗和远方，还有程序和代码</a></h4>
+                <span class="article-meta">2019-1-2 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Website Dev">技术控</a></span>
                 <span class="like-count">15</span>
               </li>
               <li class="article-entry video">
-                <h4><a href="single.html">孤独的歌者</a></h4>
-                <span class="article-meta">2019-1-1 出自 <a href="#" title="View all posts in Website Dev">音乐控</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">孤独的歌者</a></h4>
+                <span class="article-meta">2019-1-1 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Website Dev">音乐控</a></span>
                 <span class="like-count">8</span>
               </li>
               <li class="article-entry image">
-                <h4><a href="single.html">峡谷里的最强王者来造作啊</a></h4>
-                <span class="article-meta">2019-1-20 出自 <a href="#" title="View all posts in Advanced Techniques">电子竞技 &amp; 英雄联盟</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">峡谷里的最强王者来造作啊</a></h4>
+                <span class="article-meta">2019-1-20 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Advanced Techniques">电子竞技 &amp; 英雄联盟</a></span>
                 <span class="like-count">6</span>
               </li>
               <li class="article-entry standard">
-                <h4><a href="single.html">山区支教，让爱心传递</a></h4>
-                <span class="article-meta">2019-1-27 出自 <a href="#" title="View all posts in Website Dev">公益</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">山区支教，让爱心传递</a></h4>
+                <span class="article-meta">2019-1-27 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Website Dev">公益</a></span>
                 <span class="like-count">2</span>
               </li>
               <li class="article-entry standard">
-                <h4><a href="single.html">旅行者的游记</a></h4>
-                <span class="article-meta">2018-12-30 出自 <a href="#" title="View all posts in Website Dev">旅行</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">旅行者的游记</a></h4>
+                <span class="article-meta">2018-12-30 出自 <a href="<%=basePath%>/jsp/classification/main_class.jsp" title="View all posts in Website Dev">旅行</a></span>
                 <span class="like-count">3</span>
               </li>
             </ul>
@@ -257,32 +256,32 @@
             <h3>热门赛事</h3>
             <ul class="articles">
               <li class="article-entry">
-                <h4><a href="single.html">趣味编程大赛-百度</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">趣味编程大赛-百度</a></h4>
                 <span class="article-meta">2018-9-16 类型 <a href="#" title="View all posts in Server &amp; Database">线上赛事 &amp; 编程</a></span>
                 <span class="like-count">66</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">金融数据分析-中国银行</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">金融数据分析-中国银行</a></h4>
                 <span class="article-meta">2018-12-2 类型 <a href="#" title="View all posts in Advanced Techniques">线上赛事 &amp; 金融</a></span>
                 <span class="like-count">18</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">英雄联盟联赛-南昌高校电子竞技联盟</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">英雄联盟联赛-南昌高校电子竞技联盟</a></h4>
                 <span class="article-meta">2019-1-16 类型 <a href="#" title="View all posts in Designing in WordPress">线下赛事 &amp; 电子竞技</a></span>
                 <span class="like-count">7</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">“爱疯”篮球邀请赛</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">“爱疯”篮球邀请赛</a></h4>
                 <span class="article-meta">2019-1-13 类型 <a href="#" title="View all posts in WordPress Plugins">线下赛事 &amp; 篮球</a></span>
                 <span class="like-count">7</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">华中黑客邀请赛-KO</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">华中黑客邀请赛-KO</a></h4>
                 <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Website Dev">线上赛事 &amp; 电子技术</a></span>
                 <span class="like-count">15</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">大数据分析挑战赛</a></h4>
+                <h4><a href="<%=basePath%>/jsp/compete/compete_detail.jsp">大数据分析挑战赛</a></h4>
                 <span class="article-meta">2018-12-5 类型 <a href="#" title="View all posts in Theme Development">线上赛事 &amp; 大数据技术</a></span>
                 <span class="like-count">1</span>
               </li>
@@ -292,89 +291,89 @@
 
         <div class="row home-category-list-area">
           <div class="span8">
-            <h2>Categories</h2>
+            <h2>热门招聘</h2>
           </div>
         </div>
 
         <div class="row-fluid top-cats">
 
           <section class="span4">
-            <h4 class="category"><a href="#">WordPress for Beginners</a></h4>
+            <h4 class="category"><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">小米科技春招啦！</a></h4>
             <div class="category-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat</p>
+              <p>小米科技进行春季招聘会，在平台开设专场招聘，感兴趣的同学可以前往报名投递简历，名额有限，展示你的能力...</p>
             </div>
           </section>
 
           <section class="span4">
-            <h4 class="category"><a href="#">Designing in WordPress</a></h4>
+            <h4 class="category"><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">华为开发部招聘</a></h4>
             <div class="category-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</p>
+              <p>华为在平台开设专场招聘，感兴趣的同学可以前往报名投递简历，名额有限，展示你的能力的时刻来了...</p>
             </div>
           </section>
 
           <section class="span4">
-            <h4 class="category"><a href="#">Theme Development</a></h4>
+            <h4 class="category"><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">百度-人工智能工程师</a></h4>
             <div class="category-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</p>
+              <p>人工智能工程师应具备以下能力，擅长机器学习，有过丰富的实践经验，独立完成过至少一个人工智能项目...</p>
             </div>
           </section>
         </div>
         <div class="row-fluid top-cats">
 
           <section class="span4">
-            <h4 class="category"><a href="#">Website Dev</a></h4>
+            <h4 class="category"><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">阿里巴巴云计算工程师</a></h4>
             <div class="category-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
+              <p>有着丰富的语言功底，能够完成云计算的大部分工作，对云计算有着自己的理解，通过第一轮线上测试...</p>
             </div>
           </section>
 
           <section class="span4">
             <h4 class="category">
-              <a href="#">WordPress Plugins</a></h4>
+              <a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">蚂蚁财富-产品经理</a></h4>
             <div class="category-description">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
+              <p>要求：有着一定的经销经验，扎实的金融财务的知识，能够独立对金融产品进行分析和把握，进一步...</p>
             </div>
           </section>
 
           <section class="span4">
-            <h4 class="category"><a href="#">Advanced Techniques</a></h4>
-            <div class="category-description"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut</p>
+            <h4 class="category"><a href="<%=basePath%>/jsp/obtainEmployment/obtainEmployment_detail.jsp">官方招聘</a></h4>
+            <div class="category-description"><p>科技进行春季招聘会，在平台开设专场招聘，感兴趣的同学可以前往报名投递简历，名额有限，展示你的能力...</p>
             </div>
           </section>
         </div>
 
         <div class="row separator">
           <section class="span4 articles-list">
-            <h3>热门圈子</h3>
+            <h3>热搜表白</h3>
             <ul class="articles">
               <li class="article-entry standard">
-                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">喜欢写小说的伙伴聚过来！！！</a></h4>
-                <span class="article-meta">2018-1-12 出自 <a href="#" title="View all posts in Server &amp; Database">小说 &amp; 文字控</a></span>
+                <h4><a href="<%=basePath%>/jsp/page_detail.jsp">林沫好帅啊！！！</a></h4>
+                <span class="article-meta">2018-1-12 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Server &amp; Database">小说 &amp; 文字控</a></span>
                 <span class="like-count">66</span>
               </li>
               <li class="article-entry standard">
-                <h4><a href="single.html">生活除了诗和远方，还有程序和代码</a></h4>
-                <span class="article-meta">2019-1-2 出自 <a href="#" title="View all posts in Website Dev">技术控</a></span>
+                <h4><a href="single.html">今天碰到了有人在食堂表白</a></h4>
+                <span class="article-meta">2019-1-2 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Website Dev">技术控</a></span>
                 <span class="like-count">15</span>
               </li>
               <li class="article-entry video">
                 <h4><a href="single.html">孤独的歌者</a></h4>
-                <span class="article-meta">2019-1-1 出自 <a href="#" title="View all posts in Website Dev">音乐控</a></span>
+                <span class="article-meta">2019-1-1 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Website Dev">音乐控</a></span>
                 <span class="like-count">8</span>
               </li>
               <li class="article-entry image">
-                <h4><a href="single.html">峡谷里的最强王者来造作啊</a></h4>
-                <span class="article-meta">2019-1-20 出自 <a href="#" title="View all posts in Advanced Techniques">电子竞技 &amp; 英雄联盟</a></span>
+                <h4><a href="single.html">寻一个小姐姐</a></h4>
+                <span class="article-meta">2019-1-20 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Advanced Techniques">电子竞技 &amp; 英雄联盟</a></span>
                 <span class="like-count">6</span>
               </li>
               <li class="article-entry standard">
-                <h4><a href="single.html">山区支教，让爱心传递</a></h4>
-                <span class="article-meta">2019-1-27 出自 <a href="#" title="View all posts in Website Dev">公益</a></span>
+                <h4><a href="single.html">表白六一</a></h4>
+                <span class="article-meta">2019-1-27 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Website Dev">公益</a></span>
                 <span class="like-count">2</span>
               </li>
               <li class="article-entry standard">
                 <h4><a href="single.html">旅行者的游记</a></h4>
-                <span class="article-meta">2018-12-30 出自 <a href="#" title="View all posts in Website Dev">旅行</a></span>
+                <span class="article-meta">2018-12-30 出自 <a href="<%=basePath%>/jsp/confession/confession_detail.jsp" title="View all posts in Website Dev">旅行</a></span>
                 <span class="like-count">3</span>
               </li>
             </ul>
@@ -382,36 +381,36 @@
 
 
           <section class="span4 articles-list">
-            <h3>热门赛事</h3>
+            <h3>热搜排行</h3>
             <ul class="articles">
               <li class="article-entry">
-                <h4><a href="single.html">趣味编程大赛-百度</a></h4>
-                <span class="article-meta">2018-9-16 类型 <a href="#" title="View all posts in Server &amp; Database">线上赛事 &amp; 编程</a></span>
+                <h4><a href="single.html">人气排行</a></h4>
+                <span class="article-meta">2018-9-16 类型 <a href="<%=basePath%>/jsp/ranking_list/popularity_ranking_list.jsp" title="View all posts in Server &amp; Database">线上赛事 &amp; 编程</a></span>
                 <span class="like-count">66</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">金融数据分析-中国银行</a></h4>
-                <span class="article-meta">2018-12-2 类型 <a href="#" title="View all posts in Advanced Techniques">线上赛事 &amp; 金融</a></span>
+                <h4><a href="single.html">学术排行</a></h4>
+                <span class="article-meta">2018-12-2 类型 <a href="<%=basePath%>/jsp/ranking_list/" title="View all posts in Advanced Techniques">线上赛事 &amp; 金融</a></span>
                 <span class="like-count">18</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">英雄联盟联赛-南昌高校电子竞技联盟</a></h4>
-                <span class="article-meta">2019-1-16 类型 <a href="#" title="View all posts in Designing in WordPress">线下赛事 &amp; 电子竞技</a></span>
+                <h4><a href="single.html">竞赛排行</a></h4>
+                <span class="article-meta">2019-1-16 类型 <a href="<%=basePath%>/jsp/ranking_list/" title="View all posts in Designing in WordPress">线下赛事 &amp; 电子竞技</a></span>
                 <span class="like-count">7</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">“爱疯”篮球邀请赛</a></h4>
-                <span class="article-meta">2019-1-13 类型 <a href="#" title="View all posts in WordPress Plugins">线下赛事 &amp; 篮球</a></span>
+                <h4><a href="single.html">积分排行</a></h4>
+                <span class="article-meta">2019-1-13 类型 <a href="<%=basePath%>/jsp/ranking_list/" title="View all posts in WordPress Plugins">线下赛事 &amp; 篮球</a></span>
                 <span class="like-count">7</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">华中黑客邀请赛-KO</a></h4>
-                <span class="article-meta">2019-1-1 类型 <a href="#" title="View all posts in Website Dev">线上赛事 &amp; 电子技术</a></span>
+                <h4><a href="single.html">华中人气排行</a></h4>
+                <span class="article-meta">2019-1-1 类型 <a href="<%=basePath%>/jsp/ranking_list/" title="View all posts in Website Dev">线上赛事 &amp; 电子技术</a></span>
                 <span class="like-count">15</span>
               </li>
               <li class="article-entry">
-                <h4><a href="single.html">大数据分析挑战赛</a></h4>
-                <span class="article-meta">2018-12-5 类型 <a href="#" title="View all posts in Theme Development">线上赛事 &amp; 大数据技术</a></span>
+                <h4><a href="single.html">华北人气排行</a></h4>
+                <span class="article-meta">2018-12-5 类型 <a href="<%=basePath%>/jsp/ranking_list/" title="View all posts in Theme Development">线上赛事 &amp; 大数据技术</a></span>
                 <span class="like-count">1</span>
               </li>
             </ul>
@@ -425,12 +424,12 @@
       <aside class="span4 page-sidebar">
           <section>
               <div id="turn" class="turn">
-                  <div class="turn-loading"><img src="img/wheel/loading_comment.gif" /></div>
+                  <div class="turn-loading"><img src="<%=basePath%>/img/wheel/loading_comment.gif" /></div>
                   <ul class="turn-pic">
-                      <li><a href="#"><img src="img/wheel/1.jpg" title="演示信息1" /></a></li>
-                      <li><a href="#"><img src="img/wheel/2.jpg" title="演示信息2" /></a></li>
-                      <li><a href="#"><img src="img/wheel/3.jpg" title="演示信息3" /></a></li>
-                      <li><a href="#"><img src="img/wheel/4.jpg" title="演示信息4" /></a></li>
+                      <li><a href="#"><img src="<%=basePath%>/img/wheel/wheel1.jpg" title="为何Google将几十亿行源代码放在一个仓库？" /></a></li>
+                      <li><a href="#"><img src="<%=basePath%>/img/wheel/wheel2.jpg" title="鏖战九载，Google是否会因Oracle而弃用 Java？" /></a></li>
+                      <li><a href="#"><img src="<%=basePath%>/img/wheel/wheel3.png" title="程序员为什么要学算法与数据结构？" /></a></li>
+                      <li><a href="#"><img src="<%=basePath%>/img/wheel/wheel4.jpg" title="以太坊大神怒怼智能合约之父，到底做错了啥？" /></a></li>
                   </ul>
               </div>
           </section>
@@ -444,10 +443,10 @@
           <div class="quick-links-widget">
             <h3 class="title">热搜圈主</h3>
             <ul id="menu-quick-links" class="menu clearfix">
-              <li><a href="index-2.html">马云</a></li>
-              <li><a href="articles-list.html">马化腾</a></li>
-              <li><a href="faq.html">吴恩达</a></li>
-              <li><a href="contact.html">雷军</a></li>
+              <li><a href="#">马云</a></li>
+              <li><a href="#">马化腾</a></li>
+              <li><a href="#">吴恩达</a></li>
+              <li><a href="#">雷军</a></li>
             </ul>
           </div>
         </section>
@@ -458,7 +457,7 @@
                       <ul>
                           <li><h3><a href="#" class="linktit">移动娱乐业务突飞</a></h3> <div>为了探索推进公车改革后，新能源汽车分时租赁项目试点工作，并成立了试点工作小组... </div></li>
                           <li><h3><a href="#" class="linktit">不停转动向上滚动可控制向上向下滚动特效</a></h3> <div>DIV CSS JS自动不断向上一个一个滚动可控制向上向下滚动特效... </div></li>
-                          <li><h3><a href="#" class="linktit">全国涂料总产量呈现直线下滑态势</a></h3> <div>我国涂料工业将面临涂料消费税征收全面铺开，环保压力持续增加，2015年的形势不容乐观... </div></li>
+                          <li><h3><a href="#" class="linktit">全国涂料总产量呈现直线下滑态势</a></h3> <div>我国涂料工业将面临涂料消费税征收全面铺开，环保压力持续增加，2019年的形势不容乐观... </div></li>
                           <li><h3><a href="#" class="linktit">镂空渔网超吸睛</a></h3> <div>镂空罩衫，短短的版型穿起来显高又俏皮，内搭长款连衣裙，非常大方哦... </div></li>
                           <li><h3><a href="#" class="linktit">主题创业街亮相</a></h3> <div>目前已有包括咖啡厅、酒吧、餐厅、瑜伽室在内的8家商铺入驻该火车... </div></li>
                       </ul>
@@ -494,14 +493,14 @@
           <section class="widget">
               <h3 class="title">分类</h3>
               <ul>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet,">计算机技术</a> </li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet,">文学</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet,">摄影</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet, ">数学</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet,">语言能力</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet,">体能运动</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet, ">公益性质</a></li>
-                  <li><a href="#" title="Lorem ipsum dolor sit amet, ">电子竞技</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="圈子,计算机技术">计算机技术</a> </li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet,">文学</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet,">摄影</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet, ">数学</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet,">语言能力</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet,">体能运动</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet, ">公益性质</a></li>
+                  <li><a href="<%=basePath%>/jsp/classification/main_class.jsp" title="Lorem ipsum dolor sit amet, ">电子竞技</a></li>
               </ul>
           </section>
 
@@ -602,7 +601,32 @@
 <script type='text/javascript' src='<%=basePath%>/js/jquery-3.3.1.min.js'></script>
 <script type='text/javascript' src='<%=basePath%>/js/custom.js'></script>
 <script type='text/javascript' src='<%=basePath%>/js/wheel/jq_scroll.js'></script>
+<script type="text/javascript" src="<%=basePath%>/js/main.js"></script>
 <script>
+    <%--判断是否登录--%>
+    if(sessionStorage.getItem("loginUserMessage") == "null" || sessionStorage.getItem("loginUserMessage") == null){
+        $("#logining").css("display", "none");
+    }else{
+        var loginUserMessage = JSON.parse(sessionStorage.getItem("loginUserMessage"));
+        $("#loginRegister").css("display", "none");
+        $("#loginUserImage").attr("src", loginUserMessage.image);
+    }
+    $("#outLogin").click(function () {
+        sessionStorage.setItem("loginUserMessage", null);
+        $("#logining").css("display", "none");
+        $("#loginRegister").css("display", "inline");
+    });
+
+    $("#search-button").click(function () {
+        var input = $("#s").val();
+
+        if(input == ""){
+            $("#search-error-container").html("*内容不能为空！")
+        }else{
+            window.location.href = "<%=basePath%>/jsp/search_result.jsp";
+        }
+    });
+
     $(document).ready(function(){
         $("#scrollDiv").Scroll({line:1,speed:500,timer:3000,up:"but_up",down:"but_down"});
     });
