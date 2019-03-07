@@ -15,1493 +15,580 @@
 
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSPINIA | Clients</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en" class="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Musik | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
 </head>
-<body>
-<div id="wrapper">
-    <nav class="navbar-default navbar-static-side" role="navigation">
-        <div class="sidebar-collapse">
-            <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
-                    <div class="dropdown profile-element"> <span>
-<img alt="image" class="img-circle" src="img/profile_small.jpg" />
+<body class="">
+<section class="vbox">
+    <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside bg-info dk">
+            <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
+                <i class="icon-list"></i>
+            </a>
+            <a href="index.html" class="navbar-brand text-lt">
+                <i class="icon-earphones"></i>
+                <img src="images/logo.png" alt="." class="hide">
+                <span class="hidden-nav-xs m-l-sm">Musik</span>
+            </a>
+            <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
+                <i class="icon-settings"></i>
+            </a>
+        </div> <ul class="nav navbar-nav hidden-xs">
+        <li>
+            <a href="#nav,.navbar-header" data-toggle="class:nav-xs,nav-xs" class="text-muted">
+                <i class="fa fa-indent text"></i>
+                <i class="fa fa-dedent text-active"></i>
+            </a>
+        </li>
+    </ul>
+        <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+            <div class="form-group">
+                <div class="input-group">
+<span class="input-group-btn">
+<button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
 </span>
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-<span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-</span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="profile.html">Profile</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="mailbox.html">Mailbox</a></li>
-                            <li class="divider"></li>
-                            <li><a href="login.html">Logout</a></li>
-                        </ul>
-                    </div>
-                    <div class="logo-element">
-                        IN+
-                    </div>
+                    <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
+                </div>
+            </div>
+        </form>
+        <div class="navbar-right ">
+            <ul class="nav navbar-nav m-n hidden-xs nav-user user">
+                <li class="hidden-xs">
+                    <a href="#" class="dropdown-toggle lt" data-toggle="dropdown">
+                        <i class="icon-bell"></i>
+                        <span class="badge badge-sm up bg-danger count">2</span>
+                    </a>
+                    <section class="dropdown-menu aside-xl animated fadeInUp">
+                        <section class="panel bg-white">
+                            <div class="panel-heading b-light bg-light">
+                                <strong>You have <span class="count">2</span> notifications</strong>
+                            </div>
+                            <div class="list-group list-group-alt">
+                                <a href="#" class="media list-group-item">
+<span class="pull-left thumb-sm">
+<img src="images/a0.png" alt="..." class="img-circle">
+</span>
+                                    <span class="media-body block m-b-none">
+Use awesome animate.css<br>
+<small class="text-muted">10 minutes ago</small>
+</span>
+                                </a>
+                                <a href="#" class="media list-group-item">
+<span class="media-body block m-b-none">
+1.0 initial released<br>
+<small class="text-muted">1 hour ago</small>
+</span>
+                                </a>
+                            </div>
+                            <div class="panel-footer text-sm">
+                                <a href="#" class="pull-right"><i class="fa fa-cog"></i></a>
+                                <a href="#notes" data-toggle="class:show animated fadeInRight">See all the notifications</a>
+                            </div>
+                        </section>
+                    </section>
                 </li>
-                <li>
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="index.html">Dashboard v.1</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                        <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                        <li><a href="dashboard_5.html">Dashboard v.5 <span class="label label-primary pull-right">NEW</span></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="layouts.html"><i class="fa fa-diamond"></i> <span class="nav-label">Layouts</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Graphs</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="graph_flot.html">Flot Charts</a></li>
-                        <li><a href="graph_morris.html">Morris.js Charts</a></li>
-                        <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
-                        <li><a href="graph_chartjs.html">Chart.js</a></li>
-                        <li><a href="graph_chartist.html">Chartist</a></li>
-                        <li><a href="c3.html">c3 charts</a></li>
-                        <li><a href="graph_peity.html">Peity Charts</a></li>
-                        <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="mailbox.html">Inbox</a></li>
-                        <li><a href="mail_detail.html">Email view</a></li>
-                        <li><a href="mail_compose.html">Compose email</a></li>
-                        <li><a href="email_template.html">Email templates</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span> </a>
-                </li>
-                <li>
-                    <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="form_basic.html">Basic form</a></li>
-                        <li><a href="form_advanced.html">Advanced Plugins</a></li>
-                        <li><a href="form_wizard.html">Wizard</a></li>
-                        <li><a href="form_file_upload.html">File Upload</a></li>
-                        <li><a href="form_editors.html">Text Editor</a></li>
-                        <li><a href="form_markdown.html">Markdown</a></li>
-                    </ul>
-                </li>
-                <li class="active">
-                    <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">App Views</span> <span class="pull-right label label-primary">SPECIAL</span></a>
-                    <ul class="nav nav-second-level">
-                        <li><a href="contacts.html">Contacts</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="profile_2.html">Profile v.2</a></li>
-                        <li><a href="contacts_2.html">Contacts v.2</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="project_detail.html">Project detail</a></li>
-                        <li><a href="teams_board.html">Teams board</a></li>
-                        <li><a href="social_feed.html">Social feed</a></li>
-                        <li class="active"><a href="clients.html">Clients</a></li>
-                        <li><a href="full_height.html">Outlook view</a></li>
-                        <li><a href="vote_list.html">Vote list</a></li>
-                        <li><a href="file_manager.html">File manager</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="issue_tracker.html">Issue tracker</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="article.html">Article</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="pin_board.html">Pin board</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Other Pages</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="search_results.html">Search results</a></li>
-                        <li><a href="lockscreen.html">Lockscreen</a></li>
-                        <li><a href="invoice.html">Invoice</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="login_two_columns.html">Login v.2</a></li>
-                        <li><a href="forgot_password.html">Forget password</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="404.html">404 Page</a></li>
-                        <li><a href="500.html">500 Page</a></li>
-                        <li><a href="empty_page.html">Empty page</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">Miscellaneous</span><span class="label label-info pull-right">NEW</span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="toastr_notifications.html">Notification</a></li>
-                        <li><a href="nestable_list.html">Nestable list</a></li>
-                        <li><a href="agile_board.html">Agile board</a></li>
-                        <li><a href="timeline_2.html">Timeline v.2</a></li>
-                        <li><a href="diff.html">Diff</a></li>
-                        <li><a href="i18support.html">i18 support</a></li>
-                        <li><a href="sweetalert.html">Sweet alert</a></li>
-                        <li><a href="idle_timer.html">Idle timer</a></li>
-                        <li><a href="truncate.html">Truncate</a></li>
-                        <li><a href="spinners.html">Spinners</a></li>
-                        <li><a href="tinycon.html">Live favicon</a></li>
-                        <li><a href="google_maps.html">Google maps</a></li>
-                        <li><a href="code_editor.html">Code editor</a></li>
-                        <li><a href="modal_window.html">Modal window</a></li>
-                        <li><a href="clipboard.html">Clipboard</a></li>
-                        <li><a href="forum_main.html">Forum view</a></li>
-                        <li><a href="validation.html">Validation</a></li>
-                        <li><a href="tree_view.html">Tree view</a></li>
-                        <li><a href="loading_buttons.html">Loading buttons</a></li>
-                        <li><a href="chat_view.html">Chat view</a></li>
-                        <li><a href="masonry.html">Masonry</a></li>
-                        <li><a href="tour.html">Tour</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-flask"></i> <span class="nav-label">UI Elements</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="icons.html">Icons</a></li>
-                        <li><a href="draggable_panels.html">Draggable Panels</a></li> <li><a href="resizeable_panels.html">Resizeable Panels</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="video.html">Video</a></li>
-                        <li><a href="tabs_panels.html">Panels</a></li>
-                        <li><a href="tabs.html">Tabs</a></li>
-                        <li><a href="notifications.html">Notifications & Tooltips</a></li>
-                        <li><a href="badges_labels.html">Badges, Labels, Progress</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="table_basic.html">Static Tables</a></li>
-                        <li><a href="table_data_tables.html">Data Tables</a></li>
-                        <li><a href="table_foo_table.html">Foo Tables</a></li>
-                        <li><a href="jq_grid.html">jqGrid</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-shopping-cart"></i> <span class="nav-label">E-commerce</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="ecommerce_products_grid.html">Products grid</a></li>
-                        <li><a href="ecommerce_product_list.html">Products list</a></li>
-                        <li><a href="ecommerce_product.html">Product edit</a></li>
-                        <li><a href="ecommerce_product_detail.html">Product detail</a></li>
-                        <li><a href="ecommerce-cart.html">Cart</a></li>
-                        <li><a href="ecommerce-orders.html">Orders</a></li>
-                        <li><a href="ecommerce_payments.html">Credit Card form</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-picture-o"></i> <span class="nav-label">Gallery</span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
-                        <li><a href="basic_gallery.html">Lightbox Gallery</a></li>
-                        <li><a href="slick_carousel.html">Slick Carousel</a></li>
-                        <li><a href="carousel.html">Bootstrap Carousel</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Menu Levels </span><span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
+<span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+<img src="images/a0.png" alt="...">
+</span>
+                        John.Smith <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight">
                         <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                            </ul>
+                            <span class="arrow top"></span>
+                            <a href="#">Settings</a>
                         </li>
-                        <li><a href="#">Second Level Item</a></li>
                         <li>
-                            <a href="#">Second Level Item</a></li>
+                            <a href="profile.html">Profile</a>
+                        </li>
                         <li>
-                            <a href="#">Second Level Item</a></li>
+                            <a href="#">
+                                <span class="badge bg-danger pull-right">3</span>
+                                Notifications
+                            </a>
+                        </li>
+                        <li>
+                            <a href="docs.html">Help</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS Animations </span><span class="label label-info pull-right">62</span></a>
-                </li>
-                <li class="landing_link">
-                    <a target="_blank" href="landing.html"><i class="fa fa-star"></i> <span class="nav-label">Landing Page</span> <span class="label label-warning pull-right">NEW</span></a>
-                </li>
-                <li class="special_link">
-                    <a href="package.html"><i class="fa fa-database"></i> <span class="nav-label">Package</span></a>
                 </li>
             </ul>
         </div>
-    </nav>
-    <div id="page-wrapper" class="gray-bg">
-        <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" action="search_results.html">
-                        <div class="form-group">
-                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-                        </div>
-                    </form>
-                </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li>
-                        <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a7.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <small class="pull-right">46h ago</small>
-                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a4.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right text-navy">5h ago</small>
-                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/profile.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right">23h ago</small>
-                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="mailbox.html">
-                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="mailbox.html">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="profile.html">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="grid_options.html">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="notifications.html">
-                                        <strong>See All Alerts</strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            <i class="fa fa-sign-out"></i> Log out
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>Clients</h2>
-                <ol class="breadcrumb">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a>App Views</a>
-                    </li>
-                    <li class="active">
-                        <strong>Clients</strong>
-                    </li>
-                </ol>
-            </div>
-            <div class="col-lg-2">
-            </div>
-        </div>
-        <div class="wrapper wrapper-content  animated fadeInRight">
-            <div class="row">
-                <div class="col-sm-8">
-                    <div class="ibox">
-                        <div class="ibox-content">
-                            <span class="text-muted small pull-right">Last modification: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
-                            <h2>Clients</h2>
-                            <p>
-                                All clients need to be verified before you can send email and set a project.
-                            </p>
-                            <div class="input-group">
-                                <input type="text" placeholder="Search client " class="input form-control">
-                                <span class="input-group-btn">
-<button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
-</span>
-                            </div>
-                            <div class="clients-list">
-                                <ul class="nav nav-tabs">
-                                    <span class="pull-right small text-muted">1406 Elements</span>
-                                    <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> Contacts</a></li>
-                                    <li class=""><a data-toggle="tab" href="#tab-2"><i class="fa fa-briefcase"></i> Companies</a></li>
+    </header>
+    <section>
+        <section class="hbox stretch">
+
+            <aside class="bg-black dk aside hidden-print" id="nav">
+                <section class="vbox">
+                    <section class="w-f-md scrollable">
+                        <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
+
+                            <nav class="nav-primary hidden-xs">
+                                <ul class="nav bg clearfix">
+                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                        Discover
+                                    </li>
+                                    <li>
+                                        <a href="index.html">
+                                            <i class="icon-disc icon text-success"></i>
+                                            <span class="font-bold">What's new</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="genres.html">
+                                            <i class="icon-music-tone-alt icon text-info"></i>
+                                            <span class="font-bold">Genres</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="events.html">
+                                            <i class="icon-drawer icon text-primary-lter"></i>
+                                            <b class="badge bg-primary pull-right">6</b>
+                                            <span class="font-bold">Events</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="listen.html">
+                                            <i class="icon-list icon  text-info-dker"></i>
+                                            <span class="font-bold">Listen</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="video.html" data-target="#content" data-el="#bjax-el" data-replace="true">
+                                            <i class="icon-social-youtube icon  text-primary"></i>
+                                            <span class="font-bold">Video</span>
+                                        </a>
+                                    </li>
+                                    <li class="m-b hidden-nav-xs"></li>
                                 </ul>
-                                <div class="tab-content">
-                                    <div id="tab-1" class="tab-pane active">
-                                        <div class="full-height-scroll">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-hover">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td class="client-avatar"><img alt="image" src="img/a2.jpg"> </td>
-                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson</a></td>
-                                                        <td> Tellus Institute</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73140112051a17123301111a001a075d101c1e">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><img alt="image" src="img/a3.jpg"> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Rooney Lindsay</a></td>
-                                                        <td>Proin Limited</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="65170a0a0b001c2515170a0c0b4b060a08">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><img alt="image" src="img/a4.jpg"> </td>
-                                                        <td><a data-toggle="tab" href="#contact-3" class="client-link">Lionel Mcmillan</a></td>
-                                                        <td>Et Industries</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +432 955 908</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a5.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-4" class="client-link">Edan Randall</a></td>
-                                                        <td>Integer Sem Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +422 600 213</td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a6.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Jasper Carson</a></td>
-                                                        <td>Mone Industries</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +400 468 921</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a7.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-3" class="client-link">Reuben Pacheco</a></td>
-                                                        <td>Magna Associates</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6818090b000d0b07280509060f09460b0705">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-info">Phoned</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a1.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">Simon Carson</a></td>
-                                                        <td>Erat Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4112282c2e2f01243335206f222e2c">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a3.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Rooney Lindsay</a></td>
-                                                        <td>Proin Limited</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="73011c1c1d160a3303011c1a1d5d101c1e">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a4.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-3" class="client-link">Lionel Mcmillan</a></td>
-                                                        <td>Et Industries</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +432 955 908</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a5.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-4" class="client-link">Edan Randall</a></td>
-                                                        <td>Integer Sem Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +422 600 213</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a2.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">Anthony Jackson</a></td>
-                                                        <td> Tellus Institute</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="37504556415e53567745555e445e431954585a">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-danger">Deleted</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a7.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Reuben Pacheco</a></td>
-                                                        <td>Magna Associates</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="403021232825232f002d212e27216e232f2d">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a5.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-3" class="client-link">Edan Randall</a></td>
-                                                        <td>Integer Sem Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +422 600 213</td>
-                                                        <td class="client-status"><span class="label label-info">Phoned</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a6.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-4" class="client-link">Jasper Carson</a></td>
-                                                        <td>Mone Industries</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +400 468 921</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a7.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Reuben Pacheco</a></td>
-                                                        <td>Magna Associates</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd8d9c9e95989e92bd909c939a9cd39e9290">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a1.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">Simon Carson</a></td>
-                                                        <td>Erat Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5102383c3e3f11342325307f323e3c">[email&#160;protected]</a></td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a3.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-3" class="client-link">Rooney Lindsay</a></td>
-                                                        <td>Proin Limited</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ccbea3a3a2a9b58cbcbea3a5a2e2afa3a1">[email&#160;protected]</a></td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a4.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-4" class="client-link">Lionel Mcmillan</a></td>
-                                                        <td>Et Industries</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +432 955 908</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a5.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">Edan Randall</a></td>
-                                                        <td>Integer Sem Corp.</td>
-                                                        <td class="contact-type"><i class="fa fa-phone"> </i></td>
-                                                        <td> +422 600 213</td>
-                                                        <td class="client-status"><span class="label label-info">Phoned</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a2.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-2" class="client-link">Anthony Jackson</a></td>
-                                                        <td> Tellus Institute</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b1c091a0d121f1a3b09191208120f55181416">[email&#160;protected]</a></td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="client-avatar"><a href=""><img alt="image" src="img/a7.jpg"></a> </td>
-                                                        <td><a data-toggle="tab" href="#contact-4" class="client-link">Reuben Pacheco</a></td>
-                                                        <td>Magna Associates</td>
-                                                        <td class="contact-type"><i class="fa fa-envelope"> </i></td>
-                                                        <td> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8fffeeece7eaece0cfe2eee1e8eea1ece0e2">[email&#160;protected]</a></td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="tab-2" class="tab-pane">
-                                        <div class="full-height-scroll">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-hover">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tellus Institute</a></td>
-                                                        <td>Rexton</td>
-                                                        <td><i class="fa fa-flag"></i> Angola</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Velit Industries</a></td>
-                                                        <td>Maglie</td>
-                                                        <td><i class="fa fa-flag"></i> Luxembourg</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link">Art Limited</a></td>
-                                                        <td>Sooke</td>
-                                                        <td><i class="fa fa-flag"></i> Philippines</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tempor Arcu Corp.</a></td>
-                                                        <td>Eisden</td>
-                                                        <td><i class="fa fa-flag"></i> Korea, North</td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Penatibus Consulting</a></td>
-                                                        <td>Tribogna</td>
-                                                        <td><i class="fa fa-flag"></i> Montserrat</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link"> Ultrices Incorporated</a></td>
-                                                        <td>Basingstoke</td>
-                                                        <td><i class="fa fa-flag"></i> Tunisia</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Et Arcu Inc.</a></td>
-                                                        <td>Sioux City</td>
-                                                        <td><i class="fa fa-flag"></i> Burundi</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tellus Institute</a></td>
-                                                        <td>Rexton</td>
-                                                        <td><i class="fa fa-flag"></i> Angola</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Velit Industries</a></td>
-                                                        <td>Maglie</td>
-                                                        <td><i class="fa fa-flag"></i> Luxembourg</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link">Art Limited</a></td>
-                                                        <td>Sooke</td>
-                                                        <td><i class="fa fa-flag"></i> Philippines</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tempor Arcu Corp.</a></td>
-                                                        <td>Eisden</td>
-                                                        <td><i class="fa fa-flag"></i> Korea, North</td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Penatibus Consulting</a></td>
-                                                        <td>Tribogna</td>
-                                                        <td><i class="fa fa-flag"></i> Montserrat</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link"> Ultrices Incorporated</a></td>
-                                                        <td>Basingstoke</td>
-                                                        <td><i class="fa fa-flag"></i> Tunisia</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Et Arcu Inc.</a></td>
-                                                        <td>Sioux City</td>
-                                                        <td><i class="fa fa-flag"></i> Burundi</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tellus Institute</a></td>
-                                                        <td>Rexton</td>
-                                                        <td><i class="fa fa-flag"></i> Angola</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Velit Industries</a></td>
-                                                        <td>Maglie</td>
-                                                        <td><i class="fa fa-flag"></i> Luxembourg</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link">Art Limited</a></td>
-                                                        <td>Sooke</td>
-                                                        <td><i class="fa fa-flag"></i> Philippines</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-1" class="client-link">Tempor Arcu Corp.</a></td>
-                                                        <td>Eisden</td>
-                                                        <td><i class="fa fa-flag"></i> Korea, North</td>
-                                                        <td class="client-status"><span class="label label-warning">Waiting</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Penatibus Consulting</a></td>
-                                                        <td>Tribogna</td>
-                                                        <td><i class="fa fa-flag"></i> Montserrat</td>
-                                                        <td class="client-status"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-3" class="client-link"> Ultrices Incorporated</a></td>
-                                                        <td>Basingstoke</td>
-                                                        <td><i class="fa fa-flag"></i> Tunisia</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><a data-toggle="tab" href="#company-2" class="client-link">Et Arcu Inc.</a></td>
-                                                        <td>Sioux City</td>
-                                                        <td><i class="fa fa-flag"></i> Burundi</td>
-                                                        <td class="client-status"><span class="label label-primary">Active</span></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <ul class="nav" data-ride="collapse">
+                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                        Interface
+                                    </li>
+                                    <li >
+                                        <a href="#" class="auto">
+<span class="pull-right text-muted">
+<i class="fa fa-angle-left text"></i>
+<i class="fa fa-angle-down text-active"></i>
+</span>
+                                            <i class="icon-screen-desktop icon">
+                                            </i>
+                                            <span>Layouts</span>
+                                        </a>
+                                        <ul class="nav dk text-sm">
+                                            <li >
+                                                <a href="layout-color.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Color option</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="layout-boxed.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Boxed layout</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="layout-fluid.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Fluid layout</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li >
+                                        <a href="#" class="auto">
+<span class="pull-right text-muted">
+<i class="fa fa-angle-left text"></i>
+<i class="fa fa-angle-down text-active"></i>
+</span>
+                                            <i class="icon-chemistry icon">
+                                            </i>
+                                            <span>UI Kit</span>
+                                        </a>
+                                        <ul class="nav dk text-sm">
+                                            <li >
+                                                <a href="buttons.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="icons.html" class="auto">
+                                                    <b class="badge bg-info pull-right">369</b>
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Icons</span>
+                                                </a>
+                                            </li><li >
+                                            <a href="http://www.weidea.net" class="auto">
+                                                <b class="badge bg-info pull-right">369</b>
+                                                <i class="fa fa-angle-right text-xs"></i>
+                                                <span>More</span>
+                                            </a>
+                                        </li>
+                                            <li >
+                                                <a href="grid.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Grid</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="widgets.html" class="auto">
+                                                    <b class="badge bg-dark pull-right">8</b>
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Widgets</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="components.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Components</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="list.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>List group</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="#table" class="auto">
+<span class="pull-right text-muted">
+<i class="fa fa-angle-left text"></i>
+<i class="fa fa-angle-down text-active"></i>
+</span>
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Table</span>
+                                                </a>
+                                                <ul class="nav dker">
+                                                    <li >
+                                                        <a href="table-static.html">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            <span>Table static</span>
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a href="table-datatable.html">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            <span>Datatable</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li >
+                                                <a href="#form" class="auto">
+<span class="pull-right text-muted">
+<i class="fa fa-angle-left text"></i>
+<i class="fa fa-angle-down text-active"></i>
+</span>
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Form</span>
+                                                </a>
+                                                <ul class="nav dker">
+                                                    <li >
+                                                        <a href="form-elements.html">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            <span>Form elements</span>
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a href="form-validation.html">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            <span>Form validation</span>
+                                                        </a>
+                                                    </li>
+                                                    <li >
+                                                        <a href="form-wizard.html">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            <span>Form wizard</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li >
+                                                <a href="chart.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Chart</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="portlet.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Portlet</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="timeline.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Timeline</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li  class="active">
+                                        <a href="#" class="auto">
+<span class="pull-right text-muted">
+<i class="fa fa-angle-left text"></i>
+<i class="fa fa-angle-down text-active"></i>
+</span>
+                                            <i class="icon-grid icon">
+                                            </i>
+                                            <span>Pages</span>
+                                        </a>
+                                        <ul class="nav dk text-sm">
+                                            <li >
+                                                <a href="profile.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Profile</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="blog.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Blog</span>
+                                                </a>
+                                            </li>
+                                            <li  class="active">
+                                                <a href="invoice.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Invoice</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="gmap.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Google Map</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="jvectormap.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Vector Map</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="signin.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Signin</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="signup.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>Signup</span>
+                                                </a>
+                                            </li>
+                                            <li >
+                                                <a href="404.html" class="auto">
+                                                    <i class="fa fa-angle-right text-xs"></i>
+                                                    <span>404</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav text-sm">
+                                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                                        <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                                        Playlist
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-music-tone icon"></i>
+                                            <span>Hip-Pop</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-playlist icon text-success-lter"></i>
+                                            <b class="badge bg-success dker pull-right">9</b>
+                                            <span>Jazz</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </section>
+                    <footer class="footer hidden-xs no-padder text-center-nav-xs">
+                        <div class="bg hidden-xs ">
+                            <div class="dropdown dropup wrapper-sm clearfix">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="thumb-sm avatar pull-left m-l-xs">
+<img src="images/a3.png" class="dker" alt="...">
+<i class="on b-black"></i>
+</span>
+                                    <span class="hidden-nav-xs clear">
+<span class="block m-l">
+<strong class="font-bold text-lt">John.Smith</strong>
+<b class="caret"></b>
+</span>
+<span class="text-muted text-xs block m-l">Art Director</span>
+</span>
+                                </a>
+                                <ul class="dropdown-menu animated fadeInRight aside text-left">
+                                    <li>
+                                        <span class="arrow bottom hidden-nav-xs"></span>
+                                        <a href="#">Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="profile.html">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="badge bg-danger pull-right">3</span>
+                                            Notifications
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="docs.html">Help</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> </footer>
+                </section>
+            </aside>
+
+            <section id="content">
+                <section class="vbox bg-white">
+                    <header class="header bg-light lter hidden-print">
+                        <a href="#" class="btn btn-sm btn-info pull-right" onClick="window.print();">Print</a>
+                        <p>Invoice</p>
+                    </header>
+                    <section class="scrollable wrapper">
+                        <i class="fa fa-apple fa fa-3x"></i>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h4>Apple Inc.</h4>
+                                <p><a href="http://www.apple.com">www.apple.com</a></p>
+                                <p>1 Infinite Loop <br>
+                                    95014 Cuperino, CA<br>
+                                    United States
+                                </p>
+                                <p>
+                                    Telephone: 800-692-7753<br>
+                                    Fax: 800-692-7753
+                                </p>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <p class="h4">#9048392</p>
+                                <h5>29th Mar 2013</h5>
+                            </div>
+                        </div>
+                        <div class="well bg-light b m-t">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <strong>TO:</strong>
+                                    <h4>John Smith</h4>
+                                    <p>
+                                        2nd Floor<br>
+                                        St John Street, Aberdeenshire 2541<br>
+                                        United Kingdom<br>
+                                        Phone: 031-432-678<br>
+                                        Email: youemail@gmail.com<br>
+                                    </p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <strong>SHIP TO:</strong>
+                                    <h4>John Smith</h4>
+                                    <p>
+                                        2nd Floor<br>
+                                        St John Street, Aberdeenshire 2541<br>
+                                        United Kingdom<br>
+                                        Phone: 031-432-678<br>
+                                        Email: youemail@gmail.com<br>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="ibox ">
-                        <div class="ibox-content">
-                            <div class="tab-content">
-                                <div id="contact-1" class="tab-pane active">
-                                    <div class="row m-b-lg">
-                                        <div class="col-lg-4 text-center">
-                                            <h2>Nicki Smith</h2>
-                                            <div class="m-b-sm">
-                                                <img alt="image" class="img-circle" src="img/a2.jpg" style="width: 62px">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <strong>
-                                                About me
-                                            </strong>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua.
-                                            </p>
-                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> 09:00 pm </span>
-                                                    Please contact me
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 10:16 am </span>
-                                                    Sign a contract
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 08:22 pm </span>
-                                                    Open new shop
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 11:06 pm </span>
-                                                    Call back to Sylvia
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 12:00 am </span>
-                                                    Write a letter to Sandra
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="contact-2" class="tab-pane">
-                                    <div class="row m-b-lg">
-                                        <div class="col-lg-4 text-center">
-                                            <h2>Edan Randall</h2>
-                                            <div class="m-b-sm">
-                                                <img alt="image" class="img-circle" src="img/a3.jpg" style="width: 62px">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <strong>
-                                                About me
-                                            </strong>
-                                            <p>
-                                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default tempor incididunt model text.
-                                            </p>
-                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> 09:00 pm </span>
-                                                    Lorem Ipsum available
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 10:16 am </span>
-                                                    Latin words, combined
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 08:22 pm </span>
-                                                    Open new shop
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 11:06 pm </span>
-                                                    The generated Lorem Ipsum
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 12:00 am </span>
-                                                    Content here, content here
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="contact-3" class="tab-pane">
-                                    <div class="row m-b-lg">
-                                        <div class="col-lg-4 text-center">
-                                            <h2>Jasper Carson</h2>
-                                            <div class="m-b-sm">
-                                                <img alt="image" class="img-circle" src="img/a4.jpg" style="width: 62px">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <strong>
-                                                About me
-                                            </strong>
-                                            <p>
-                                                Latin professor at Hampden-Sydney College in Virginia, looked embarrassing hidden in the middle.
-                                            </p>
-                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> 09:00 pm </span>
-                                                    Aldus PageMaker including
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 10:16 am </span>
-                                                    Finibus Bonorum et Malorum
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 08:22 pm </span>
-                                                    Write a letter to Sandra
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 11:06 pm </span>
-                                                    Standard chunk of Lorem
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 12:00 am </span>
-                                                    Open new shop
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="contact-4" class="tab-pane">
-                                    <div class="row m-b-lg">
-                                        <div class="col-lg-4 text-center">
-                                            <h2>Reuben Pacheco</h2>
-                                            <div class="m-b-sm">
-                                                <img alt="image" class="img-circle" src="img/a5.jpg" style="width: 62px">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                            <strong>
-                                                About me
-                                            </strong>
-                                            <p>
-                                                Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,written in 45 BC. This book is a treatise on.
-                                            </p>
-                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> 09:00 pm </span>
-                                                    The point of using
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 10:16 am </span>
-                                                    Lorem Ipsum is that it has
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 08:22 pm </span>
-                                                    Text, and a search for 'lorem ipsum'
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 11:06 pm </span>
-                                                    Passages of Lorem Ipsum
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> 12:00 am </span>
-                                                    If you are going
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="company-1" class="tab-pane">
-                                    <div class="m-b-lg">
-                                        <h2>Tellus Institute</h2>
-                                        <p>
-                                            Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,written in 45 BC. This book is a treatise on.
-                                        </p>
-                                        <div>
-                                            <small>Active project completion with: 48%</small>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 48%;" class="progress-bar"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> <span class="label label-primary">NEW</span> </span>
-                                                    The point of using
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> <span class="label label-warning">WAITING</span></span>
-                                                    Lorem Ipsum is that it has
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> <span class="label label-danger">BLOCKED</span> </span>
-                                                    If you are going
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="company-2" class="tab-pane">
-                                    <div class="m-b-lg">
-                                        <h2>Penatibus Consulting</h2>
-                                        <p>
-                                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some.
-                                        </p>
-                                        <div>
-                                            <small>Active project completion with: 22%</small>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 22%;" class="progress-bar"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> <span class="label label-warning">WAITING</span> </span>
-                                                    Aldus PageMaker
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"><span class="label label-primary">NEW</span> </span>
-                                                    Lorem Ipsum, you need to be sure
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> <span class="label label-danger">BLOCKED</span> </span>
-                                                    The generated Lorem Ipsum
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="company-3" class="tab-pane">
-                                    <div class="m-b-lg">
-                                        <h2>Ultrices Incorporated</h2>
-                                        <p>
-                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.
-                                        </p>
-                                        <div>
-                                            <small>Active project completion with: 72%</small>
-                                            <div class="progress progress-mini">
-                                                <div style="width: 72%;" class="progress-bar"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="client-detail">
-                                        <div class="full-height-scroll">
-                                            <strong>Last activity</strong>
-                                            <ul class="list-group clear-list">
-                                                <li class="list-group-item fist-item">
-                                                    <span class="pull-right"> <span class="label label-danger">BLOCKED</span> </span>
-                                                    Hidden in the middle of text
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"><span class="label label-primary">NEW</span> </span>
-                                                    Non-characteristic words etc.
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <span class="pull-right"> <span class="label label-warning">WAITING</span> </span>
-                                                    Bonorum et Malorum
-                                                </li>
-                                            </ul>
-                                            <strong>Notes</strong>
-                                            <p>
-                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
-                                            </p>
-                                            <hr />
-                                            <strong>Timeline activity</strong>
-                                            <div id="vertical-timeline" class="vertical-container dark-timeline">
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-bolt"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>There are many variations of passages of Lorem Ipsum available.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 06:10 pm - 11.03.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon navy-bg">
-                                                        <i class="fa fa-warning"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>The generated Lorem Ipsum is therefore.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 02:50 pm - 03.10.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-coffee"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Conference on the sales results for the previous year.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 2:10 pm - 12.06.2014 </span>
-                                                    </div>
-                                                </div>
-                                                <div class="vertical-timeline-block">
-                                                    <div class="vertical-timeline-icon gray-bg">
-                                                        <i class="fa fa-briefcase"></i>
-                                                    </div>
-                                                    <div class="vertical-timeline-content">
-                                                        <p>Many desktop publishing packages and web page editors now use Lorem.
-                                                        </p>
-                                                        <span class="vertical-date small text-muted"> 4:20 pm - 10.05.2014 </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="pull-right">
-                10GB of <strong>250GB</strong> Free.
-            </div>
-            <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2015
-            </div>
-        </div>
-    </div>
-</div>
+                        <p class="m-t m-b">Order date: <strong>26th Mar 2013</strong><br>
+                            Order status: <span class="label bg-success">Shipped</span><br>
+                            Order ID: <strong>#9399034</strong>
+                        </p>
+                        <div class="line"></div>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th style="width: 60px">QTY</th>
+                                <th>DESCRIPTION</th>
+                                <th style="width: 140px">UNIT PRICE</th>
+                                <th style="width: 90px">TOTAL</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>iPhone 5 32GB White & Silver (GSM) Unlocked</td>
+                                <td>$749.00</td>
+                                <td>$749.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>iPad mini with Wi-Fi 32GB - White & Silver</td>
+                                <td>$429.00</td>
+                                <td>$858.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right"><strong>Subtotal</strong></td>
+                                <td>$1607.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right no-border"><strong>Shipping</strong></td>
+                                <td>$0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right no-border"><strong>VAT Included in Total</strong></td>
+                                <td>$0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-right no-border"><strong>Total</strong></td>
+                                <td><strong>$1607.00</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+            </section>
+        </section>
+    </section>
+</section>
+<script src="js/jquery.min.js"></script>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/bootstrap.js"></script>
 
-<script src="js/inspinia.js"></script>
-<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/app.plugin.js"></script>
+<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+<script type="text/javascript" src="js/jPlayer/demo.js"></script>
 </body>
 </html>

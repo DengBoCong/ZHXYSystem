@@ -162,7 +162,12 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
+                                    <tr>
+                                        <th>180016</th>
+                                        <th>Amazing</th>
+                                        <th><a href="<%=basePath%>/jsp/User/compete/registrationInformation_compete.jsp">报名信息</a></th>
+                                        <th class="text-warning">通过</th>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -174,6 +179,118 @@
         <div class="footer">
             <div>
                 <strong>Copyright</strong> Amazing &copy; 2018-2019
+            </div>
+        </div>
+    </div>
+    <div id="right-sidebar">
+        <div class="sidebar-container">
+            <div class="sidebar-title">
+                <h3><i class="fa fa-gears"></i> 控制设置</h3>
+                <small><i class="fa fa-tim"></i> 你有7个功能性设置，可以对赛事进行细节操作。</small>
+            </div>
+            <div class="setings-item">
+                <span>
+                    赛事主页显示报名情况
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                        <label class="onoffswitch-label" for="example">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    赛事主页显示各赛事链接
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                        <label class="onoffswitch-label" for="example2">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    赛事主页投放广告
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                        <label class="onoffswitch-label" for="example3">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    隐藏赛事主页倒计时
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                        <label class="onoffswitch-label" for="example4">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    隐藏赛事主页评论
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                        <label class="onoffswitch-label" for="example5">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    赛事主页显示组委会面板
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                        <label class="onoffswitch-label" for="example6">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="setings-item">
+                <span>
+                    赛事主页显示轮播大图
+                </span>
+                <div class="switch">
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                        <label class="onoffswitch-label" for="example7">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <h4>功能性说明</h4>
+                <div class="small">
+                    以上的七个功能均为针对赛事主页的设置，并且功能将作用于所有的赛事。在下一个版本中，我们将分离功能的作用域。
+                </div>
             </div>
         </div>
     </div>

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Power
-  Date: 2019/2/11
-  Time: 17:49
+  Date: 2019/2/14
+  Time: 11:10
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -356,93 +356,75 @@
                         <section class="hbox stretch">
                             <aside class="bg-white">
                                 <section class="vbox">
-                                    <header class="header bg-light lt">
-                                        <ul class="nav nav-tabs nav-white">
-                                            <li class="active"><a href="#activity" data-toggle="tab">已通过申请</a></li>
-                                            <li class=""><a href="#events" data-toggle="tab">驳回</a></li>
-                                            <li class=""><a href="#interaction" data-toggle="tab">提交申请</a></li>
-                                        </ul>
+                                    <header class="header bg-light lter hidden-print">
+                                        <a href="#" class="btn btn-sm btn-info pull-right" onClick="window.print();">打印</a>
+                                        <p>个人对外服务申请</p>
                                     </header>
-                                    <section class="scrollable">
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="activity">
-                                                <div class="">
-                                                    <ul class="list-group gutter list-group-lg list-group-sp sortable">
-                                                        <li class="list-group-item">
-                                                            <span class="pull-right" >
-                                                                <a href="#"><i class="fa fa-plus icon-muted fa-fw m-r-xs"></i></a>
-                                                                <a href="#"><i class="fa fa-times icon-muted fa-fw"></i></a>
-                                                            </span>
-                                                            <span class="pull-left media-xs"><i class="fa fa-sort text-muted fa m-r-sm"></i></span>
-                                                            <a href="<%=basePath%>/jsp/User/valueAddedService/valueAddedService_detail.jsp">
-                                                                <div class="clear">
-                                                                    软件外包
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                        <li class="list-group-item">
-                                                            <span class="pull-right" >
-                                                                <a href="#"><i class="fa fa-plus icon-muted fa-fw m-r-xs"></i></a>
-                                                                <a href="#"><i class="fa fa-times icon-muted fa-fw"></i></a>
-                                                            </span>
-                                                            <span class="pull-left media-xs"><i class="fa fa-sort text-muted fa m-r-sm"></i></span>
-                                                            <div class="clear">
-                                                                平面设计外包
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                    <section class="scrollable wrapper">
+                                        <%--<i class="fa fa-apple fa fa-3x"></i>--%>
+                                        <img src="<%=basePath%>/img/person.jpeg" style="width: 100px; height: 100px;">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <h4>林沫</h4>
+                                                <p>个人对外服务站外链接：<a href="#">无</a></p>
+                                                <p>账号认证等级：个人账号1级
+                                                </p>
+                                                <p>
+                                                    联系电话：18870120086<br>
+                                                    Email：1210826890@qq.com<br>
+                                                    传真: 800-692-7753
+                                                </p>
                                             </div>
-                                            <div class="tab-pane" id="events">
-                                                <div class="">
-                                                    <ul class="list-group gutter list-group-lg list-group-sp sortable">
-                                                        <li class="list-group-item">
-                                                            <span class="pull-right" >
-                                                                <a href="#"><i class="fa fa-times icon-muted fa-fw"></i></a>
-                                                            </span>
-                                                            <span class="pull-left media-xs"><i class="fa fa-sort text-muted fa m-r-sm"></i></span>
-                                                            <div class="clear">
-                                                                论文代写  驳回理由：该服务涉及违规服务内容，请修改后重新提交申请。
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane" id="interaction">
-                                                <section class="panel panel-default">
-                                                    <div class="panel-body">
-                                                        <p class="text-muted">请仔细填写申请内容，有助于通过申请。</p>
-                                                        <div class="form-group pull-in clearfix">
-                                                            <div class="col-sm-6">
-                                                                <label>服务名称</label>
-                                                                <input type="text" class="form-control" placeholder="输入服务标题">
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <label>服务价格</label>
-                                                                <div class="input-group m-b">
-                                                                    <span class="input-group-addon">￥</span>
-                                                                    <input type="text" class="form-control">
-                                                                    <span class="input-group-addon">.00</span>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>备注(即服务的补充说明)</label>
-                                                            <input type="text" data-type="url" class="form-control" placeholder="你对顾客有什么要说的么...">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>申请服务详细描述</label>
-                                                            <textarea class="form-control" rows="6" data-minwords="6" data-required="true" placeholder="输入你的申请服务详细描述"></textarea>
-                                                        </div>
-                                                        <div id="demo" class="demo"></div>
-                                                        <footer class="panel-footer text-right bg-light lter">
-                                                            <button type="submit" class="btn btn-success btn-s-xs">提交</button>
-                                                        </footer>
-                                                    </div>
-                                                </section>
+                                            <div class="col-xs-6 text-right">
+                                                <p class="h4">该申请编号：9048392</p>
+                                                <h5>申请提交时间：2019-2-16 06:18:16</h5>
                                             </div>
                                         </div>
+                                        <div class="well bg-light b m-t">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <strong>服务名称：</strong><br>
+                                                    <strong>服务价格：</strong><br>
+                                                    <strong>备注：</strong><br>
+                                                    <strong>详细申请理由：</strong>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <strong>软件外包</strong><br>
+                                                    <strong>￥10,000</strong><br>
+                                                    <strong>即服务的补充说明</strong><br>
+                                                    <strong>详细的申请理由</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="m-t m-b">申请图片文件：<strong>无</strong><br>
+                                            申请状态：<span class="label bg-success">已通过</span><br>
+                                            申请编号：<strong>9399034</strong>
+                                        </p>
+                                        <div class="line"></div>
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th style="width: 60px">序号</th>
+                                                <th>链接</th>
+                                                <th style="width: 140px">最低价</th>
+                                                <th style="width: 90px">最高价</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>http://www.github.com/</td>
+                                                <td>￥749.00</td>
+                                                <td>￥12,,749.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>http://www.github.com/</td>
+                                                <td>￥749.00</td>
+                                                <td>￥12,,749.00</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </section>
                                 </section>
                             </aside>
@@ -480,5 +462,3 @@
 </script>
 </body>
 </html>
-
-
